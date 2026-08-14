@@ -1,0 +1,51 @@
+@use "@/styles/theme/responsive" as *;
+
+.Layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 72px;
+  align-items: center;
+
+  @include tablet-lg {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.imageLeft {
+  grid-template-columns: 1.3fr 1fr;
+
+  .Body {
+    order: 2;
+  }
+
+  @include tablet-lg {
+    grid-template-columns: 1fr;
+
+    .Body {
+      order: 0;
+    }
+  }
+}
+
+.Body {
+  min-width: 0;
+}
+
+.Media {
+  height: 480px;
+  border-radius: var(--radius-sm);
+
+  @include tablet-sm {
+    height: 320px;
+  }
+}
+
+.contain {
+  background-color: var(--color-surface);
+
+  img {
+    object-fit: contain;
+    padding: 24px;
+  }
+}

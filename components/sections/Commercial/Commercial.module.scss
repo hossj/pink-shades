@@ -1,17 +1,4 @@
 @use "@/styles/theme/mixins" as *;
-@use "@/styles/theme/responsive" as *;
-
-.Layout {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 72px;
-  align-items: center;
-
-  @include tablet-lg {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
 
 .Title {
   @include display-text;
@@ -36,13 +23,4 @@
 
 .Action {
   margin-top: 30px;
-}
-
-.Media {
-  height: 480px;
-  border-radius: var(--radius-sm);
-
-  @include tablet-sm {
-    height: 320px;
-  }
 }
