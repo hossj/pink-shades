@@ -1,0 +1,63 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.PageHero {
+  position: relative;
+  overflow: hidden;
+  margin-top: calc(-1 * (var(--header-height) + var(--header-offset)));
+  padding-block: calc(var(--header-height) + var(--header-offset) + 56px) 88px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      var(--color-primary-bright) 0,
+      var(--color-primary-bright) 2px,
+      transparent 2px,
+      transparent 16px
+    );
+    mask-image: linear-gradient(to bottom, black 0%, transparent 48%);
+    pointer-events: none;
+  }
+
+  @include tablet-sm {
+    padding-block: calc(var(--header-height) + var(--header-offset) + 32px) 56px;
+  }
+}
+
+.Content {
+  position: relative;
+  max-width: 880px;
+  text-align: center;
+  animation: fade-up 700ms var(--ease-default) both;
+}
+
+.Eyebrow {
+  color: var(--color-primary-pale);
+}
+
+.Title {
+  @include display-text;
+
+  margin-top: 16px;
+  font-size: var(--text-h1);
+  line-height: var(--leading-heading);
+  text-wrap: balance;
+}
+
+.Accent {
+  font-style: italic;
+  color: var(--color-primary-pale);
+}
+
+.Description {
+  max-width: 56ch;
+  margin: 20px auto 0;
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-on-primary-strong);
+}

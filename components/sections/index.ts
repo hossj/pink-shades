@@ -1,10 +1,14 @@
+export { AboutStory } from "./AboutStory";
 export { Benefits } from "./Benefits";
 export { CallToAction } from "./CallToAction";
 export { Commercial } from "./Commercial";
 export { Footer } from "./Footer";
 export { Header } from "./Header";
 export { Hero } from "./Hero";
+export { Leadership } from "./Leadership";
 export { Motorization } from "./Motorization";
 export { Products } from "./Products";
+export { ServiceArea } from "./ServiceArea";
 export { Stats } from "./Stats";
 export { Testimonials } from "./Testimonials";
+export { WhyUs } from "./WhyUs";

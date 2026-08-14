@@ -17,7 +17,8 @@
     "motorization": "Motorization",
     "gallery": "Gallery",
     "reviews": "Reviews",
-    "freeEstimate": "Free estimate"
+    "freeEstimate": "Free estimate",
+    "about": "About"
   },
   "hero": {
     "imageAlt": "Plantation shutters",
@@ -174,5 +175,47 @@
   },
   "common": {
     "close": "Close"
+  },
+  "about": {
+    "meta": {
+      "title": "About Us | Pink Blinds & Shutters",
+      "description": "Family-owned in McLean, VA with 35 years in the window treatment industry — quality and innovative products at reasonable prices."
+    },
+    "hero": {
+      "eyebrow": "About us",
+      "titleStart": "Doing the",
+      "titleAccent": "right thing",
+      "titleEnd": "— not just doing things right.",
+      "description": "Throughout the years, we have been able to offer our valued customers quality and innovative products at reasonable prices."
+    },
+    "story": {
+      "imageAlt": "Inside the Pink Blinds & Shutters showroom",
+      "eyebrow": "Our story",
+      "title": "35 years of quality and innovation",
+      "paragraphOne": "Our top management has been involved in this industry for 35 years. Throughout the years, we have been able to offer our valued customers quality and innovative products at reasonable prices.",
+      "paragraphTwo": "From our showroom in McLean we measure, fabricate, install and service every treatment ourselves — for homes, offices and everything between."
+    },
+    "whyUs": {
+      "eyebrow": "Why us",
+      "title": "What every customer gets",
+      "description": "No matter the size of the job, these come standard."
+    },
+    "leadership": {
+      "eyebrow": "Leadership",
+      "title": "Meet the founder",
+      "sia": {
+        "imageAlt": "Sia Harandi",
+        "name": "Sia Harandi",
+        "role": "CEO, Founder",
+        "bio": "Sia Harandi attended George Washington University, where he earned a Mechanical Engineering degree, and has led the company through 35 years in the window treatment industry."
+      }
+    },
+    "serviceArea": {
+      "imageAlt": "Map of the Pink Blinds & Shutters service area",
+      "eyebrow": "Service area",
+      "title": "Commercial and residential services near you",
+      "description": "We cater to a large radius of towns and cities around the Washington and Virginia areas.",
+      "cta": "Book a free estimate"
+    }
   }
 }

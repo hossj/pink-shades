@@ -1,0 +1,46 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Intro {
+  margin-bottom: 52px;
+}
+
+.Card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 760px;
+  margin-inline: auto;
+  padding: 40px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+
+  @include tablet-sm {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 28px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+}
+
+.Portrait {
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+}
+
+.Caption {
+  @include mono-label;
+
+  font-size: var(--text-mono);
+  color: var(--color-primary);
+}
+
+.Bio {
+  margin-top: 14px;
+  font-size: var(--text-body);
+  line-height: var(--leading-loose);
+  color: var(--color-foreground-body);
+}

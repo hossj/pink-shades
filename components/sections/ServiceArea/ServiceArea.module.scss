@@ -1,0 +1,22 @@
+@use "@/styles/theme/mixins" as *;
+
+.Title {
+  @include display-text;
+
+  margin-top: 14px;
+  font-size: var(--text-h3);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  text-wrap: balance;
+}
+
+.Description {
+  margin-top: 22px;
+  font-size: var(--text-body);
+  line-height: var(--leading-loose);
+  color: var(--color-foreground-body);
+}
+
+.Action {
+  margin-top: 30px;
+}

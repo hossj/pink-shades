@@ -1,0 +1,19 @@
+@use "@/styles/theme/responsive" as *;
+
+.Container {
+  max-width: calc(920px + 2 * var(--container-padding));
+}
+
+.Intro {
+  margin-bottom: 52px;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+
+  @include tablet-sm {
+    grid-template-columns: 1fr;
+  }
+}
