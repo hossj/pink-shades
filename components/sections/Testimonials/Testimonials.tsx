@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionIntro } from "@/components/ui/SectionIntro";
-import { testimonials } from "@/content/content";
+import { testimonials } from "@/content/home";
 import { cx } from "@/lib/cx";
 import { t } from "@/lib/i18n";
 

@@ -1,7 +1,7 @@
 import { EstimateButton } from "@/components/estimate";
 import { Button } from "@/components/ui/Button";
 import { CoverImage } from "@/components/ui/CoverImage";
-import { media } from "@/content/content";
+import { media } from "@/content/home";
 import { site } from "@/content/site";
 import { t } from "@/lib/i18n";
 

@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { CoverImage } from "@/components/ui/CoverImage";
-import { products } from "@/content/content";
+import { products } from "@/content/home";
 import { cx } from "@/lib/cx";
 import { t } from "@/lib/i18n";
 

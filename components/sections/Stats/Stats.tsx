@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { stats } from "@/content/content";
+import { stats } from "@/content/home";
 import { cx } from "@/lib/cx";
 import { t } from "@/lib/i18n";
 

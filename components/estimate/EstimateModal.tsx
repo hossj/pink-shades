@@ -5,7 +5,7 @@ import { CoverImage } from "@/components/ui/CoverImage";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Field, Input, Select, Textarea } from "@/components/ui/Field";
 import { Modal } from "@/components/ui/Modal";
-import { estimateInterests, media } from "@/content/content";
+import { estimateInterests, media } from "@/content/home";
 import { site } from "@/content/site";
 import { t } from "@/lib/i18n";
 

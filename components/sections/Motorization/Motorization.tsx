@@ -1,7 +1,7 @@
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
-import { media, motorizationOptions } from "@/content/content";
+import { media, motorizationOptions } from "@/content/home";
 import { t } from "@/lib/i18n";
 
 import styles from "./Motorization.module.scss";
