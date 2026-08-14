@@ -1,0 +1,178 @@
+{
+  "site": {
+    "name": "Pink Blinds & Shutters",
+    "legalName": "© Pink Blinds and Shutters Interiors LLC",
+    "phone": "703-346-8533",
+    "tollFree": "1-833-PINKMEN (746-5636)",
+    "email": "info@pinkblindsandshutters.com",
+    "addressLine1": "6830 Elm Street",
+    "addressLine2": "McLean, VA 22101"
+  },
+  "meta": {
+    "title": "Pink Blinds & Shutters | Custom Window Treatments in McLean, VA",
+    "description": "Motorized shades and shutters — hardwired or battery-powered with remote control — custom fabricated, professionally installed, and backed by 35 years in the industry."
+  },
+  "nav": {
+    "products": "Products",
+    "motorization": "Motorization",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "freeEstimate": "Free estimate"
+  },
+  "hero": {
+    "imageAlt": "Plantation shutters",
+    "eyebrow": "Custom window treatments · McLean, Virginia",
+    "titleLine1": "Soft light.",
+    "titleLine2": "Quiet rooms.",
+    "titleLine3": "Beautiful windows.",
+    "description": "Motorized shades and shutters — hardwired or battery-powered with remote control — custom fabricated, professionally installed, and backed by 35 years in the industry.",
+    "primaryCta": "Book a free in-home estimate",
+    "secondaryCta": "or call 703-346-8533"
+  },
+  "stats": {
+    "yearsValue": "35 yrs",
+    "yearsLabel": "In the industry",
+    "ratingValue": "4.7★",
+    "ratingLabel": "Google rating",
+    "localValue": "Local",
+    "localLabel": "Family-owned in McLean, VA"
+  },
+  "products": {
+    "woodBlinds": {
+      "name": "Horizontal Wood Blinds",
+      "tag": "N°01 — Blinds",
+      "description": "A warm and cozy layout that makes your house more homey."
+    },
+    "plantationShutters": {
+      "name": "Plantation Shutters",
+      "tag": "N°02 — Shutters",
+      "description": "Make your home energy efficient with high-end shutters."
+    },
+    "solarShades": {
+      "name": "Solar Shades & Tracks",
+      "tag": "N°03 — Shades",
+      "description": "Cut glare and heat without losing your view."
+    },
+    "cellularShades": {
+      "name": "Cellular Shades",
+      "tag": "N°04 — Shades",
+      "description": "Insulating shades that keep comfort in and bills down."
+    }
+  },
+  "motorization": {
+    "imageAlt": "Motorized roller shades",
+    "eyebrow": "Motorization",
+    "title": "Shades that move at the touch of a button",
+    "description": "The industry is moving toward motorized shades and shutters — and so are we. Every treatment we install can be motorized, two ways:",
+    "hardwired": {
+      "number": "01",
+      "title": "Hardwired low voltage",
+      "description": "Wired into your home's low-voltage system — no batteries to charge, ever. The cleanest choice for new builds and renovations."
+    },
+    "battery": {
+      "number": "02",
+      "title": "Rechargeable battery + remote",
+      "description": "No wiring needed — a rechargeable motor fits any existing window, controlled from a handheld remote. Ideal for retrofits."
+    }
+  },
+  "benefits": {
+    "eyebrow": "Why pink",
+    "title": "Easy on your windows, easy on your wallet",
+    "description": "Three things every customer gets, no matter the size of the job.",
+    "local": {
+      "tag": "Local business",
+      "title": "Your McLean neighbors",
+      "description": "Family-owned and operated right here in McLean — we measure, install and service every window ourselves."
+    },
+    "estimate": {
+      "tag": "At no charge",
+      "title": "Free in-home estimate",
+      "description": "We come to you, measure, and quote at no charge."
+    },
+    "delivery": {
+      "tag": "Self-measured",
+      "title": "Free delivery",
+      "description": "Whenever you provide us with your own window measurements."
+    }
+  },
+  "commercial": {
+    "imageAlt": "Commercial installation",
+    "eyebrow": "Commercial + residential",
+    "title": "One team for homes, offices and everything between",
+    "paragraphOne": "Pink Blinds & Shutters caters to both residential as well as commercial customers. Contract pricing is available upon request.",
+    "paragraphTwo": "Every product is fabricated with the highest quality materials — and every supplier we work with must meet, and exceed, those standards.",
+    "cta": "Contact us"
+  },
+  "testimonials": {
+    "eyebrow": "Reviews",
+    "title": "Our customers say it best",
+    "description": "A 4.7 rating from 50+ reviews on Google — here's what a few of them told us.",
+    "stars": "★★★★★",
+    "starsLabel": "5 out of 5 stars",
+    "garnet": {
+      "name": "Garnet Gilmore",
+      "quote": "“Our new plantation shutters look fabulous! Another company had told me that my slider door was too long for their shutters but this was not an issue with Sia and his install team!”"
+    },
+    "ramin": {
+      "name": "Ramin Shirazi",
+      "quote": "“Their staff is very knowledgeable about their products, are receptive to the client's goals for the project, and responsive. I plan to work with them on future home projects.”"
+    },
+    "susan": {
+      "name": "Susan Westbrook",
+      "quote": "“I've used Pink Blinds & Shutters for years and wouldn't think of using anyone else. Excellent service, awesome products, and white-glove installation.”"
+    }
+  },
+  "callToAction": {
+    "titleStart": "Ready to see it on",
+    "titleAccent": "your",
+    "titleEnd": "windows?",
+    "description": "We measure, you choose, we install.",
+    "primaryCta": "Free estimate"
+  },
+  "footer": {
+    "about": "Our top management has been involved in this industry for 35 years, offering quality and innovative products at reasonable prices.",
+    "company": "Company",
+    "partnerships": "Partnerships",
+    "contact": "Contact",
+    "aboutUs": "About us",
+    "gallery": "Gallery",
+    "pricing": "Pricing",
+    "news": "News",
+    "franchise": "Franchise",
+    "designers": "Designers",
+    "builders": "Builders & developers",
+    "realtors": "Realtors",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "youtube": "YouTube"
+  },
+  "estimate": {
+    "imageAlt": "Motorized roller shades",
+    "eyebrow": "Free estimate",
+    "title": "Book your free in-home estimate",
+    "description": "We come to you, measure, and quote at no charge. We'll get back to you within one business day.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Jane Smith",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "(703) 555-0123",
+    "emailLabel": "Email",
+    "emailPlaceholder": "jane@email.com",
+    "interestLabel": "What are you interested in?",
+    "notesLabel": "Notes",
+    "notesHint": "(optional)",
+    "notesPlaceholder": "Number of windows, rooms, timing…",
+    "submit": "Request my estimate",
+    "orCall": "or call",
+    "interests": {
+      "motorized": "Motorized shades & shutters",
+      "shutters": "Plantation shutters",
+      "woodBlinds": "Wood blinds",
+      "solarShades": "Solar / roller shades",
+      "cellularShades": "Cellular shades",
+      "other": "Something else"
+    }
+  },
+  "common": {
+    "close": "Close"
+  }
+}
