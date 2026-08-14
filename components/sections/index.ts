@@ -9,6 +9,7 @@ export { Hero } from "./Hero";
 export { Leadership } from "./Leadership";
 export { Motorization } from "./Motorization";
 export { Products } from "./Products";
+export { ProductsGrid } from "./ProductsGrid";
 export { ServiceArea } from "./ServiceArea";
 export { Stats } from "./Stats";
 export { Testimonials } from "./Testimonials";

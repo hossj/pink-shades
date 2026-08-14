@@ -238,5 +238,48 @@
       "drapery": "Drapery"
     },
     "loadMore": "Load more"
+  },
+  "productsPage": {
+    "meta": {
+      "title": "Products | Pink Blinds & Shutters",
+      "description": "Custom window treatments and window film — shutters, blinds, shades, drapery and screens, fabricated to fit and professionally installed."
+    },
+    "hero": {
+      "eyebrow": "Products",
+      "titleStart": "Made to",
+      "titleAccent": "measure",
+      "titleEnd": "for every window.",
+      "description": "Every treatment we sell is custom fabricated, professionally installed, and available motorized — hardwired or battery-powered with remote control."
+    },
+    "groups": {
+      "shutters": "Shutters",
+      "blinds": "Blinds",
+      "shades": "Shades",
+      "drapery": "Drapery",
+      "screens": "Screens",
+      "film": "Film"
+    },
+    "items": {
+      "plantationShutters": "Plantation Shutters",
+      "biFoldShutters": "Bi-fold Track Shutters",
+      "bypassTrackShutters": "Bypass Track Shutters",
+      "slidingBarnDoorShutters": "Sliding Barn Door Shutters & Tracks",
+      "horizontalWoodBlinds": "Horizontal Wood Blinds",
+      "fauxWoodBlinds": "Horizontal Faux Wood Blinds",
+      "pinkluxeBlinds": "PinkLuxe Blinds",
+      "rollerShades": "Roller Shades",
+      "solarShades": "Solar Shades & Tracks",
+      "flatRomanShades": "Flat Roman Shades",
+      "wovenWoodShades": "Woven Wood Shades",
+      "honeycombShades": "Cellular / Honeycomb Shades",
+      "sheerShadings": "Sheer Shadings: Horizontal & Vertical",
+      "panelTracks": "Panel Tracks",
+      "draperyAndCurtains": "Drapery & Curtains",
+      "retractableScreens": "Retractable Screens",
+      "windowFilms": "Window Films & Decorative Glass"
+    },
+    "tabs": {
+      "all": "All"
+    }
   }
 }

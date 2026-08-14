@@ -1,0 +1,93 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Tabs {
+  margin-bottom: 56px;
+
+  @include tablet-sm {
+    margin-bottom: 40px;
+  }
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+  @include desktop-sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include tablet-sm {
+    grid-template-columns: 1fr;
+  }
+}
+
+.Card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: var(--color-surface);
+  animation: card-in 700ms var(--ease-out-expo) backwards;
+  animation-delay: var(--_delay, 0ms);
+  transition:
+    box-shadow var(--duration-normal) var(--ease-default),
+    transform var(--duration-normal) var(--ease-default);
+
+  &:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-3px);
+  }
+
+  @include reduced-motion {
+    animation: none;
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.Media {
+  aspect-ratio: 4 / 3;
+}
+
+.Image {
+  transition: transform var(--duration-slow) var(--ease-default);
+
+  .Card:hover & {
+    transform: scale(1.05);
+  }
+
+  @include reduced-motion {
+    .Card:hover & {
+      transform: none;
+    }
+  }
+}
+
+.Body {
+  padding: 24px 26px 28px;
+}
+
+.Tag {
+  @include mono-label;
+
+  font-size: var(--text-mono-sm);
+  color: var(--color-primary);
+}
+
+.Name {
+  @include display-text;
+
+  margin-top: 8px;
+  font-size: var(--text-h5);
+  line-height: var(--leading-heading);
+}

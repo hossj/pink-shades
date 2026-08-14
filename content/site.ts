@@ -5,7 +5,7 @@ export const site = {
 };
 
 export const navLinks = [
-  { href: "/#products", labelKey: "nav.products" },
+  { href: "/products", labelKey: "nav.products" },
   { href: "/#motorization", labelKey: "nav.motorization" },
   { href: "/gallery", labelKey: "nav.gallery" },
   { href: "/#reviews", labelKey: "nav.reviews" },
