@@ -1,0 +1,36 @@
+@use "../theme/responsive" as *;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+}
+
+::selection {
+  background-color: var(--color-selection);
+}
+
+a {
+  transition: color var(--duration-fast) var(--ease-default);
+}
+
+@include tablet-sm {
+  :root {
+    --container-padding: 24px;
+  }
+}
+
+@include mobile-sm {
+  :root {
+    --container-padding: 16px;
+  }
+}

@@ -1,0 +1,61 @@
+:root {
+  --radius-sm: 2px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 999px;
+
+  --shadow-header: 0 8px 32px var(--color-shadow-ink);
+  --shadow-card: 0 16px 40px var(--color-shadow-primary);
+  --shadow-stack: 0 -12px 40px var(--color-shadow-ink-strong);
+  --shadow-modal: 0 32px 80px var(--color-shadow-overlay);
+  --shadow-hero-text: 0 2px 24px var(--color-shadow-hero-text);
+
+  --duration-fast: 200ms;
+  --duration-normal: 250ms;
+  --duration-slow: 650ms;
+  --duration-reveal: 800ms;
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --z-base: 0;
+  --z-raised: 10;
+  --z-header: 50;
+  --z-modal: 100;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-28: 110px;
+  --space-32: 128px;
+
+  --container-max-width: 1280px;
+  --container-padding: 40px;
+  --header-height: 82px;
+  --header-offset: 16px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

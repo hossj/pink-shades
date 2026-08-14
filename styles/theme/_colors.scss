@@ -1,0 +1,48 @@
+:root {
+  --color-primary: #c4286f;
+  --color-primary-dark: #a01a58;
+  --color-primary-bright: #ec5892;
+  --color-primary-light: #f0a8c6;
+  --color-primary-pale: #f8e1ec;
+
+  --color-background: #ffffff;
+  --color-surface: #fbf7f9;
+  --color-surface-inverse: #1a1116;
+
+  --color-foreground: #2b2226;
+  --color-foreground-body: #5c4e55;
+  --color-foreground-muted: #8a7a82;
+  --color-foreground-subtle: #9b8a92;
+  --color-foreground-inverse: #ffffff;
+
+  --color-border: #f0dde6;
+  --color-border-strong: #2b2226;
+  --color-selection: #f4d7e3;
+
+  --color-on-dark: #faf6f1;
+  --color-on-dark-strong: rgba(250, 246, 241, 0.85);
+  --color-on-dark-muted: rgba(250, 246, 241, 0.75);
+  --color-on-dark-border: rgba(250, 246, 241, 0.45);
+
+  --color-on-primary: #ffffff;
+  --color-on-primary-strong: rgba(255, 255, 255, 0.85);
+  --color-on-primary-muted: rgba(255, 255, 255, 0.78);
+  --color-on-primary-border: rgba(255, 255, 255, 0.25);
+
+  --color-scrim-strong: rgba(26, 17, 22, 0.82);
+  --color-scrim-medium: rgba(26, 17, 22, 0.55);
+  --color-scrim-soft: rgba(26, 17, 22, 0.38);
+  --color-scrim-faint: rgba(26, 17, 22, 0.2);
+  --color-scrim-hint: rgba(26, 17, 22, 0.1);
+  --color-scrim-clear: rgba(26, 17, 22, 0);
+
+  --color-glass: rgba(255, 255, 255, 0.9);
+  --color-glass-solid: rgba(255, 255, 255, 0.94);
+  --color-glass-border: rgba(255, 255, 255, 0.6);
+
+  --color-shadow-ink: rgba(43, 34, 38, 0.12);
+  --color-shadow-ink-strong: rgba(43, 34, 38, 0.14);
+  --color-shadow-primary: rgba(196, 40, 111, 0.12);
+  --color-shadow-overlay: rgba(26, 17, 22, 0.35);
+  --color-shadow-hero-text: rgba(26, 17, 22, 0.5);
+}
