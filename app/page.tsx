@@ -1,10 +1,7 @@
-import { EstimateModal, EstimateProvider } from "@/components/estimate";
 import {
   Benefits,
   CallToAction,
   Commercial,
-  Footer,
-  Header,
   Hero,
   Motorization,
   Products,
@@ -14,20 +11,15 @@ import {
 
 export default function HomePage() {
   return (
-    <EstimateProvider>
-      <Header />
-      <main>
-        <Hero />
-        <Stats />
-        <Products />
-        <Motorization />
-        <Benefits />
-        <Commercial />
-        <Testimonials />
-        <CallToAction />
-      </main>
-      <Footer />
-      <EstimateModal />
-    </EstimateProvider>
+    <main>
+      <Hero />
+      <Stats />
+      <Products />
+      <Motorization />
+      <Benefits />
+      <Commercial />
+      <Testimonials />
+      <CallToAction />
+    </main>
   );
 }
