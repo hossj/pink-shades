@@ -4,7 +4,8 @@ import { createContext, useCallback, useContext, useMemo, useState } from "react
 
 interface EstimateContextValue {
   open: boolean;
-  openEstimate: () => void;
+  note: string;
+  openEstimate: (note?: string) => void;
   closeEstimate: () => void;
 }
 
@@ -12,13 +13,17 @@ const EstimateContext = createContext<EstimateContextValue | null>(null);
 
 export function EstimateProvider({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
+  const [note, setNote] = useState("");
 
-  const openEstimate = useCallback(() => setOpen(true), []);
+  const openEstimate = useCallback((nextNote?: string) => {
+    setNote(nextNote ?? "");
+    setOpen(true);
+  }, []);
   const closeEstimate = useCallback(() => setOpen(false), []);
 
   const value = useMemo(
-    () => ({ open, openEstimate, closeEstimate }),
-    [open, openEstimate, closeEstimate],
+    () => ({ open, note, openEstimate, closeEstimate }),
+    [open, note, openEstimate, closeEstimate],
   );
 
   return (

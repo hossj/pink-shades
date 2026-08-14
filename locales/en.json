@@ -158,20 +158,12 @@
     "phonePlaceholder": "(703) 555-0123",
     "emailLabel": "Email",
     "emailPlaceholder": "jane@email.com",
-    "interestLabel": "What are you interested in?",
     "notesLabel": "Notes",
     "notesHint": "(optional)",
     "notesPlaceholder": "Number of windows, rooms, timing…",
     "submit": "Request my estimate",
     "orCall": "or call",
-    "interests": {
-      "motorized": "Motorized shades & shutters",
-      "shutters": "Plantation shutters",
-      "woodBlinds": "Wood blinds",
-      "solarShades": "Solar / roller shades",
-      "cellularShades": "Cellular shades",
-      "other": "Something else"
-    }
+    "notesPrefill": "Hi, I'm interested in"
   },
   "common": {
     "close": "Close",

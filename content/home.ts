@@ -113,11 +113,3 @@ export const testimonials = [
   },
 ] as const;
 
-export const estimateInterests = [
-  "estimate.interests.motorized",
-  "estimate.interests.shutters",
-  "estimate.interests.woodBlinds",
-  "estimate.interests.solarShades",
-  "estimate.interests.cellularShades",
-  "estimate.interests.other",
-] as const;

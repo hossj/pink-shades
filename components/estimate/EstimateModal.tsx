@@ -3,9 +3,9 @@
 import { Button } from "@/components/ui/Button";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Field, Input, Select, Textarea } from "@/components/ui/Field";
+import { Field, Input, Textarea } from "@/components/ui/Field";
 import { Modal } from "@/components/ui/Modal";
-import { estimateInterests, media } from "@/content/home";
+import { media } from "@/content/home";
 import { site } from "@/content/site";
 import { t } from "@/lib/i18n";
 
@@ -13,7 +13,7 @@ import { useEstimate } from "./EstimateProvider";
 import styles from "./EstimateModal.module.scss";
 
 export function EstimateModal() {
-  const { open, closeEstimate } = useEstimate();
+  const { open, note, closeEstimate } = useEstimate();
 
   return (
     <Modal
@@ -70,18 +70,12 @@ export function EstimateModal() {
             />
           </Field>
 
-          <Field label={t("estimate.interestLabel")}>
-            <Select name="interest" defaultValue={t(estimateInterests[0])}>
-              {estimateInterests.map((interestKey) => (
-                <option key={interestKey}>{t(interestKey)}</option>
-              ))}
-            </Select>
-          </Field>
-
           <Field label={t("estimate.notesLabel")} hint={t("estimate.notesHint")}>
             <Textarea
+              key={note}
               name="notes"
               rows={3}
+              defaultValue={note}
               placeholder={t("estimate.notesPlaceholder")}
             />
           </Field>

@@ -86,7 +86,11 @@ export function ProductDetail({ productId }: Props) {
           <li className={styles.Perk}>{t("productsPage.detail.perk2")}</li>
           <li className={styles.Perk}>{t("productsPage.detail.perk3")}</li>
         </ul>
-        <EstimateButton size="small" className={styles.Action}>
+        <EstimateButton
+          size="small"
+          className={styles.Action}
+          note={`${t("estimate.notesPrefill")} ${t(item.nameKey)}.`}
+        >
           {t("productsPage.detail.cta")}
         </EstimateButton>
       </SplitSection>
