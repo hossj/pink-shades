@@ -18,7 +18,8 @@
     "gallery": "Gallery",
     "reviews": "Reviews",
     "freeEstimate": "Free estimate",
-    "about": "About"
+    "about": "About",
+    "contact": "Contact"
   },
   "hero": {
     "imageAlt": "Plantation shutters",
@@ -163,7 +164,13 @@
     "notesPlaceholder": "Number of windows, rooms, timing…",
     "submit": "Request my estimate",
     "orCall": "or call",
-    "notesPrefill": "Hi, I'm interested in"
+    "notesPrefill": "Hi, I'm interested in",
+    "errors": {
+      "nameRequired": "Enter your name",
+      "phoneRequired": "Enter your phone number",
+      "emailRequired": "Enter your email address",
+      "emailInvalid": "Enter a valid email address"
+    }
   },
   "common": {
     "close": "Close",
@@ -388,6 +395,59 @@
       "perk1": "Custom fabricated to your windows",
       "perk2": "Professionally installed",
       "perk3": "Free in-home estimate"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact | Pink Blinds & Shutters",
+      "description": "Questions, concerns, or ready for a free estimate? Reach Pink Blinds & Shutters in McLean, VA — we'll get back to you the soonest."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "titleStart": "Let's talk about",
+      "titleAccent": "your",
+      "titleEnd": "windows.",
+      "description": "Should you have any questions or concerns, or if you are looking for a free estimate, let us know and we will get in touch with you the soonest."
+    },
+    "info": {
+      "eyebrow": "Reach us",
+      "visitTitle": "Visit",
+      "callTitle": "Call",
+      "writeTitle": "Write",
+      "directions": "Get directions"
+    },
+    "form": {
+      "eyebrow": "Send a message",
+      "title": "We reply within one business day",
+      "firstNameLabel": "First name",
+      "firstNamePlaceholder": "Jane",
+      "lastNameLabel": "Last name",
+      "lastNamePlaceholder": "Smith",
+      "companyLabel": "Company",
+      "companyPlaceholder": "Company name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "jane@email.com",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "(703) 555-0123",
+      "methodLabel": "Preferred contact method",
+      "methodText": "Text",
+      "methodEmail": "Email",
+      "methodCall": "Call",
+      "messageLabel": "Message",
+      "messagePlaceholder": "How can we help?",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "successTitle": "Message sent",
+      "successBody": "Thanks for reaching out — we'll get back to you within one business day.",
+      "error": "Something went wrong sending your message. Please try again, or call us directly.",
+      "optionalHint": "(optional)",
+      "errors": {
+        "firstNameRequired": "Enter your first name",
+        "emailRequired": "Enter your email address",
+        "emailInvalid": "Enter a valid email address",
+        "phoneRequired": "Enter your phone number",
+        "messageRequired": "Tell us how we can help"
+      }
     }
   }
 }

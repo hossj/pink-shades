@@ -2,6 +2,7 @@ export { AboutStory } from "./AboutStory";
 export { Benefits } from "./Benefits";
 export { CallToAction } from "./CallToAction";
 export { Commercial } from "./Commercial";
+export { ContactSection } from "./ContactSection";
 export { Footer } from "./Footer";
 export { GalleryGrid } from "./GalleryGrid";
 export { Header } from "./Header";

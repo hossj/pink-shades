@@ -10,6 +10,7 @@ export const navLinks = [
   { href: "/gallery", labelKey: "nav.gallery" },
   { href: "/#reviews", labelKey: "nav.reviews" },
   { href: "/about", labelKey: "nav.about" },
+  { href: "/contact", labelKey: "nav.contact" },
 ] as const;
 
 export const footerColumns = [

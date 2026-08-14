@@ -1,14 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
 import { CoverImage } from "@/components/ui/CoverImage";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Field, Input, Textarea } from "@/components/ui/Field";
 import { Modal } from "@/components/ui/Modal";
 import { media } from "@/content/home";
-import { site } from "@/content/site";
 import { t } from "@/lib/i18n";
 
+import { EstimateForm } from "./EstimateForm";
 import { useEstimate } from "./EstimateProvider";
 import styles from "./EstimateModal.module.scss";
 
@@ -35,62 +33,7 @@ export function EstimateModal() {
         <h2 className={styles.Title}>{t("estimate.title")}</h2>
         <p className={styles.Description}>{t("estimate.description")}</p>
 
-        <form
-          className={styles.Form}
-          onSubmit={(event) => {
-            event.preventDefault();
-            closeEstimate();
-          }}
-        >
-          <div className={styles.Row}>
-            <Field label={t("estimate.nameLabel")}>
-              <Input
-                type="text"
-                name="name"
-                placeholder={t("estimate.namePlaceholder")}
-                required
-              />
-            </Field>
-            <Field label={t("estimate.phoneLabel")}>
-              <Input
-                type="tel"
-                name="phone"
-                placeholder={t("estimate.phonePlaceholder")}
-                required
-              />
-            </Field>
-          </div>
-
-          <Field label={t("estimate.emailLabel")}>
-            <Input
-              type="email"
-              name="email"
-              placeholder={t("estimate.emailPlaceholder")}
-              required
-            />
-          </Field>
-
-          <Field label={t("estimate.notesLabel")} hint={t("estimate.notesHint")}>
-            <Textarea
-              key={note}
-              name="notes"
-              rows={3}
-              defaultValue={note}
-              placeholder={t("estimate.notesPlaceholder")}
-            />
-          </Field>
-
-          <Button type="submit" size="large" className={styles.Submit}>
-            {t("estimate.submit")}
-          </Button>
-
-          <p className={styles.Footnote}>
-            {t("estimate.orCall")}{" "}
-            <a href={site.phoneHref} className={styles.PhoneLink}>
-              {t("site.phone")}
-            </a>
-          </p>
-        </form>
+        <EstimateForm key={note} note={note} onSubmitted={closeEstimate} />
       </div>
     </Modal>
   );

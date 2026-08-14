@@ -23,6 +23,11 @@
   @include field-control;
 }
 
+.Error {
+  font-size: var(--text-caption);
+  color: var(--color-primary-dark);
+}
+
 .Textarea {
   resize: vertical;
   min-height: 96px;

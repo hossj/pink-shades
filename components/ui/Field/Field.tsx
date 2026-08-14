@@ -11,11 +11,12 @@ import styles from "./Field.module.scss";
 interface FieldProps {
   label: string;
   hint?: string;
+  error?: string;
   className?: string;
   children: React.ReactNode;
 }
 
-export function Field({ label, hint, className, children }: FieldProps) {
+export function Field({ label, hint, error, className, children }: FieldProps) {
   return (
     <label className={cx(styles.Field, className)}>
       <span className={styles.Label}>
@@ -23,6 +24,11 @@ export function Field({ label, hint, className, children }: FieldProps) {
         {hint && <span className={styles.Hint}>{hint}</span>}
       </span>
       {children}
+      {error && (
+        <span role="alert" className={styles.Error}>
+          {error}
+        </span>
+      )}
     </label>
   );
 }
