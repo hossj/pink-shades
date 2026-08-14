@@ -217,5 +217,26 @@
       "description": "We cater to a large radius of towns and cities around the Washington and Virginia areas.",
       "cta": "Book a free estimate"
     }
+  },
+  "gallery": {
+    "meta": {
+      "title": "Gallery | Pink Blinds & Shutters",
+      "description": "A look through real installs across the Washington and Virginia areas — shutters, shades, blinds and drapery."
+    },
+    "hero": {
+      "eyebrow": "Gallery",
+      "titleStart": "Our work, on",
+      "titleAccent": "real",
+      "titleEnd": "windows.",
+      "description": "A look through installs across the Washington and Virginia areas — shutters, shades, blinds and drapery."
+    },
+    "tabs": {
+      "all": "All",
+      "shutters": "Shutters",
+      "shades": "Shades",
+      "blinds": "Blinds",
+      "drapery": "Drapery"
+    },
+    "loadMore": "Load more"
   }
 }

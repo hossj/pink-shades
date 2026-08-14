@@ -9,7 +9,7 @@ import styles from "./Commercial.module.scss";
 export function Commercial() {
   return (
     <SplitSection
-      id="gallery"
+      id="commercial"
       image={media.commercial}
       imageAlt={t("commercial.imageAlt")}
     >

@@ -7,7 +7,7 @@ export const site = {
 export const navLinks = [
   { href: "/#products", labelKey: "nav.products" },
   { href: "/#motorization", labelKey: "nav.motorization" },
-  { href: "/#gallery", labelKey: "nav.gallery" },
+  { href: "/gallery", labelKey: "nav.gallery" },
   { href: "/#reviews", labelKey: "nav.reviews" },
   { href: "/about", labelKey: "nav.about" },
 ] as const;
@@ -18,7 +18,7 @@ export const footerColumns = [
     titleKey: "footer.company",
     links: [
       { href: "/about", labelKey: "footer.aboutUs" },
-      { href: "/#gallery", labelKey: "footer.gallery" },
+      { href: "/gallery", labelKey: "footer.gallery" },
       { href: "#", labelKey: "footer.pricing" },
       { href: "#", labelKey: "footer.news" },
     ],
