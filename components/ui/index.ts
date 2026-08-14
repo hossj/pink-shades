@@ -3,6 +3,7 @@ export { Container } from "./Container";
 export { CoverImage } from "./CoverImage";
 export { Eyebrow } from "./Eyebrow";
 export { Field, Input, Select, Textarea } from "./Field";
+export { FilterTabs, type FilterTab } from "./FilterTabs";
 export {
   CloseIcon,
   DeliveryIcon,

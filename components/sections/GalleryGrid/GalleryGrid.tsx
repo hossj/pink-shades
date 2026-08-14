@@ -1,24 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import {
-  type CSSProperties,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { type CSSProperties, useEffect, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { type FilterTab, FilterTabs } from "@/components/ui/FilterTabs";
 import { Section } from "@/components/ui/Section";
 import {
   galleryCategories,
   type GalleryCategory,
   galleryItems,
 } from "@/content/gallery";
-import { cx } from "@/lib/cx";
 import { t, type TranslationKey } from "@/lib/i18n";
 
 import styles from "./GalleryGrid.module.scss";
@@ -60,37 +53,19 @@ function useColumnCount() {
   return columns;
 }
 
+const tabs: FilterTab[] = filters.map((filter) => ({
+  id: filter,
+  labelKey: `gallery.tabs.${filter}` as TranslationKey,
+  count:
+    filter === "all"
+      ? galleryItems.length
+      : galleryItems.filter((item) => item.categories.includes(filter)).length,
+}));
+
 export function GalleryGrid() {
   const [active, setActive] = useState<Filter>("all");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const columnCount = useColumnCount();
-  const tabRefs = useRef(new Map<Filter, HTMLButtonElement>());
-  const [pill, setPill] = useState({
-    left: 0,
-    top: 0,
-    width: 0,
-    height: 0,
-    ready: false,
-  });
-
-  const movePill = useCallback((filter: Filter) => {
-    const tab = tabRefs.current.get(filter);
-    if (!tab) return;
-    setPill({
-      left: tab.offsetLeft,
-      top: tab.offsetTop,
-      width: tab.offsetWidth,
-      height: tab.offsetHeight,
-      ready: true,
-    });
-  }, []);
-
-  useEffect(() => {
-    movePill(active);
-    const onResize = () => movePill(active);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [active, movePill]);
 
   const items = useMemo(
     () =>
@@ -178,51 +153,19 @@ export function GalleryGrid() {
     return buckets;
   }, [items, visibleCount, columnCount]);
 
-  const counts = useMemo(() => {
-    const map = new Map<Filter, number>([["all", galleryItems.length]]);
-    for (const category of galleryCategories) {
-      map.set(
-        category,
-        galleryItems.filter((item) => item.categories.includes(category))
-          .length,
-      );
-    }
-    return map;
-  }, []);
 
   return (
     <Section>
       <Container>
-        <div role="tablist" className={styles.Tabs}>
-          <span
-            aria-hidden="true"
-            className={cx(styles.Pill, pill.ready && styles.pillReady)}
-            style={{
-              transform: `translate(${pill.left}px, ${pill.top}px)`,
-              width: pill.width,
-              height: pill.height,
-            }}
-          />
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              ref={(el) => {
-                if (el) tabRefs.current.set(filter, el);
-              }}
-              type="button"
-              role="tab"
-              aria-selected={filter === active}
-              onClick={() => {
-                setActive(filter);
-                setVisibleCount(PAGE_SIZE);
-              }}
-              className={cx(styles.Tab, filter === active && styles.active)}
-            >
-              {t(`gallery.tabs.${filter}` as TranslationKey)}
-              <span className={styles.Count}>{counts.get(filter)}</span>
-            </button>
-          ))}
-        </div>
+        <FilterTabs
+          tabs={tabs}
+          active={active}
+          onChange={(id) => {
+            setActive(id as Filter);
+            setVisibleCount(PAGE_SIZE);
+          }}
+          className={styles.Tabs}
+        />
 
         <div key={active} className={styles.Grid}>
           {columns.map((column, columnIndex) => (
