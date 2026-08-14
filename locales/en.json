@@ -174,7 +174,11 @@
     }
   },
   "common": {
-    "close": "Close"
+    "close": "Close",
+    "previous": "Previous image",
+    "next": "Next image",
+    "home": "Home",
+    "breadcrumbs": "Breadcrumbs"
   },
   "about": {
     "meta": {
@@ -280,6 +284,118 @@
     },
     "tabs": {
       "all": "All"
+    },
+    "details": {
+      "plantationShutters": {
+        "intro1": "Pink gives you ultimate control of light, temperature, noise and privacy, with the most durable & beautiful plantation shutters you can own. You can’t find more beautiful custom window treatments than our shutters… You’ll love the way they look in your home!",
+        "block1": "Our shutters are engineered to perform perfectly for life. They are easy to clean—just dust them like furniture or wipe smudges with a damp cloth. Our custom plantation shutters will look beautiful in your home, day after day. If you’re looking for an energy efficient shutter, look no further. The Polywood Shutter Insulating System has been built with energy conservation in mind. The shutters feature our exclusive weatherstripping on each stile (vertical section) to help block out more temperature and light than any other shutter. Polywood’s paint finish is UV coated for ultimate protection from the elements. In independent tests, Polywood was proven to be up to 70% more energy efficient than wood shutters and nearly 1600% more energy efficient than aluminum mini-blinds. Polywood shutters are more energy efficient than both wood and faux plantation shutters.",
+        "block2": "Install Polywood Shutters to your:",
+        "block3": "Sun Room",
+        "block4": "Screened in Porch",
+        "block5": "Pool Room",
+        "block6": "Gazebo",
+        "block7": "and more!",
+        "block8": "Polywood Shutters are the perfect addition to any outdoor living space. They are weatherproof, moisture, and rain resistant. Polywood shutters add value to your home, and allow for improved outdoor flexibility, and control."
+      },
+      "biFoldShutters": {
+        "intro1": "Bi-fold Shutters are constructed of hinged panels that fold up to save space and open up your doorway, Bi-fold shutters can be installed to open all in the same direction or to open toward both sides of the sliding door.",
+        "intro2": "Bi-fold Shutters are an especially good option if you want to have a full view since all the panels will conveniently fold to one side."
+      },
+      "bypassTrackShutters": {
+        "intro1": "Bypass Track Shutters are a perfect option for your sliding glass doors! The Bypass Track Shutter System operates by allowing your shutter panels to slide past each other, via top tracks, to open and close."
+      },
+      "slidingBarnDoorShutters": {
+        "intro1": "Are you looking for a unique and functional window treatment to complement any room in your home? Sliding Barn Door Shutters are an excellent conversation piece, and provide the option to let the sun shine through, or create absolute shade. Barn doors are one of the most sought after home décor items, and now Pink Blinds and Shutters is offering them to our customers."
+      },
+      "horizontalWoodBlinds": {
+        "intro1": "Our hardwood blinds are made of the highest quality Basswood. We have 6 charming collections to choose from, each with its own style."
+      },
+      "fauxWoodBlinds": {
+        "intro1": "Perfect in areas with high humidity, or as a lower-cost alternative to hardwood, our faux wood blinds are a great choice."
+      },
+      "pinkluxeBlinds": {
+        "intro1": "As Pink Blinds & Shutters Interiors works to expand our services and product line, we are excited to announce that we now produce our very own exclusive line of PinkLuxe 2” or 2 ½” horizontal slatted, Wood and Faux Wood Blinds by Pink Blinds & Shutters Interiors",
+        "block1": "Our PinkLuxe horizontal Wood and Faux Wood Blinds are proudly made in the USA and come with a limited lifetime warranty on craftsmanship and installation .",
+        "block2": "Our very own exclusive line of PinkLuxe Wood and Faux Wood Blinds are fabricated immediately and are ready to ship out within five (5) business days.",
+        "block3": "PinkLuxe Fauxwood Blinds are available in the following features and design options:",
+        "block4": "2” or 2 ½” slat size",
+        "block5": "Cordless operation option",
+        "block6": "Wand and cord operation option",
+        "block7": "Constructed of cellular PVC",
+        "block8": "resistant to humidity and temperature change; ideal for kitchens and bathrooms",
+        "block9": "Selection of 18+ colors and finishes, including wood tones and several shades of white",
+        "block10": "Color-coordinated tassels & accessories available",
+        "block11": "Decorative cloth tapes available (on 2” slat size blinds)",
+        "block12": "PinkLuxe Wood Blinds are available in the following features and design options:",
+        "block13": "2” or 2 ½” slat size",
+        "block14": "Cordless operation option",
+        "block15": "Wand and cord operation option",
+        "block16": "Constructed of 100% kiln-dried basswood",
+        "block17": "Selection of 18+ colors and finishes, including wood tones and several shades of white",
+        "block18": "Color-coordinated tassels & accessories available",
+        "block19": "Decorative cloth tapes available (on 2” slat size blinds)"
+      },
+      "rollerShades": {
+        "intro1": "Our unique line of roller shades will change the way you think about roller shades."
+      },
+      "solarShades": {
+        "intro1": "Solar shades cut glare and heat without giving up your view — a 10% openness blocks 90% of harmful ultraviolet light. They come in various colors and openness levels, and can be fabricated cordless or motorized."
+      },
+      "flatRomanShades": {
+        "intro1": "Whether you’re looking for residential or commercial window treatments, draperies are adaptable to any size window in any room environment."
+      },
+      "wovenWoodShades": {
+        "intro1": "Woven wood shades capture the beauty of the outdoors. Our woven woods take it a step farther with a unique line of reeds, grasses, bamboo, and natural fibers that create stunning masterpieces in the window."
+      },
+      "honeycombShades": {
+        "intro1": "Honeycomb or cellular shades are known for their ability to protect against UV’s, insulate against cold and heat and diffuse light. They never fade and come in variety of colors and cell sizes."
+      },
+      "sheerShadings": {
+        "intro1": "This elegant treatment represents a uniquely beautiful window covering."
+      },
+      "panelTracks": {
+        "intro1": "For a contemporary window treatment on large windows or sliding doors, our panel tracks are the perfect answer. Panel tracks allow you to control light and privacy, and do it with the greatest style. They can also be used as room dividers in your home to give you added functionality in any room."
+      },
+      "draperyAndCurtains": {
+        "intro1": "Whether you’re looking for residential or commercial window treatments, draperies are adaptable to any size window in any room environment."
+      },
+      "retractableScreens": {
+        "intro1": "Retractable screens are the perfect solution for increasing airflow by allowing the cross ventilation of a cool breeze without allowing flies and other insects in. Additionally, our retractable screens for doors allow for increased ventilation while also eliminating the hassle of a permanent screen which can disrupt everyday use.",
+        "block1": "Features & Benefits:",
+        "block2": "Customized to Fit ALL Door Types – Our retractable screens are cut to fit the exact size of your door, allowing them to fit ALL door types perfectly (including in-swing, out-swing, single, double and, sliding doors).",
+        "block3": "Protection – Retractable screens offer protection against insects from coming into your home.",
+        "block4": "Convenient and User-Friendly – Our retractable screens are there when you need them and tuck away discreetly when not in use.",
+        "block5": "Fresh Air – Bring fresh air into your home",
+        "block6": "Energy Savings – Screen doors save money on your utility bills during the hotter months of the year by reducing air conditioning use."
+      },
+      "windowFilms": {
+        "section1Title": "Security Window Film",
+        "section1Text": "Shatter Resistant Protection against Weather, Explosions, Wind, Vandalism.",
+        "section2Title": "Decorative Window Film",
+        "section2Text": "Increase Privacy, Enhance Aesthetics for Conference Rooms, Glass Partitions, Entry Doors & More.",
+        "section3Title": "Residential Homes",
+        "section3Text": "Protection from Fading due to UV Rays, Reduce Glare, Lower Energy Consumption, and Increased Privacy.",
+        "section4Title": "Commercial & Government",
+        "section4Text": "If you are looking for Low E, Energy Savings, Reduce Glare, and to improve your comfort, we can make it happen.",
+        "section5Title": "Decorative Glass",
+        "section5Text": "Add a touch of personality to your home with our gorgeous decorative glass. Watch your home light up with beautiful patterns and colors. Our decorative glass is hand selected by our team of highly educated interior designers so we can offer only the most current styles.",
+        "intro1": "Window film adds privacy, security and style to glass you already own — without replacing it. We supply and install window films and decorative glass for homes, commercial spaces and government facilities."
+      }
+    },
+    "detail": {
+      "detailsEyebrow": "Details",
+      "related": "More products",
+      "relatedTitle": "Keep exploring",
+      "cta": "Book a free in-home estimate",
+      "fauxwoodSwatchesAlt": "PinkLuxe faux wood color swatches",
+      "woodSwatchesAlt": "PinkLuxe wood color swatches",
+      "galleryEyebrow": "Gallery",
+      "galleryTitle": "In real homes",
+      "stars": "★★★★★",
+      "ratingLabel": "5.0 customer rating",
+      "perk1": "Custom fabricated to your windows",
+      "perk2": "Professionally installed",
+      "perk3": "Free in-home estimate"
     }
   }
 }

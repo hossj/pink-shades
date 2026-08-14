@@ -1,0 +1,32 @@
+@use "../theme/responsive" as *;
+
+html.vt-active * {
+  animation-duration: 0ms !important;
+  animation-delay: 0ms !important;
+}
+
+::view-transition-group(page-hero) {
+  animation-duration: 450ms;
+  animation-timing-function: var(--ease-out-expo);
+}
+
+::view-transition-old(page-hero),
+::view-transition-new(page-hero) {
+  animation-duration: 300ms;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 250ms;
+}
+
+@include reduced-motion {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,109 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-scrim-strong);
+  backdrop-filter: blur(6px);
+  animation: fade-up 250ms var(--ease-default) both;
+}
+
+.Stage {
+  position: relative;
+  width: min(1100px, 90vw);
+  height: min(760px, 78vh);
+  animation: fade-up 350ms var(--ease-out-expo) both;
+
+  @include reduced-motion {
+    animation: none;
+  }
+}
+
+.Image {
+  object-fit: contain;
+}
+
+.Close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: var(--z-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-glass);
+  color: var(--color-foreground);
+  transition:
+    background-color var(--duration-fast) var(--ease-default),
+    color var(--duration-fast) var(--ease-default);
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+}
+
+.Previous,
+.Next {
+  position: absolute;
+  top: 50%;
+  z-index: var(--z-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-glass);
+  color: var(--color-foreground);
+  transform: translateY(-50%);
+  transition:
+    background-color var(--duration-fast) var(--ease-default),
+    color var(--duration-fast) var(--ease-default);
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  @include tablet-sm {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.Previous {
+  left: 24px;
+
+  @include tablet-sm {
+    left: 12px;
+  }
+}
+
+.Next {
+  right: 24px;
+
+  @include tablet-sm {
+    right: 12px;
+  }
+}
+
+.Counter {
+  @include mono-label;
+
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--text-mono);
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-on-dark);
+}

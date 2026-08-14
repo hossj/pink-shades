@@ -8,6 +8,7 @@ export { Header } from "./Header";
 export { Hero } from "./Hero";
 export { Leadership } from "./Leadership";
 export { Motorization } from "./Motorization";
+export { ProductDetail } from "./ProductDetail";
 export { Products } from "./Products";
 export { ProductsGrid } from "./ProductsGrid";
 export { ServiceArea } from "./ServiceArea";

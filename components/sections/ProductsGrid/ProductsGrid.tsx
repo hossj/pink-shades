@@ -3,15 +3,16 @@
 import { type CSSProperties, useMemo, useState } from "react";
 
 import { Container } from "@/components/ui/Container";
-import { CoverImage } from "@/components/ui/CoverImage";
 import { type FilterTab, FilterTabs } from "@/components/ui/FilterTabs";
+import { ProductCard } from "@/components/ui/ProductCard";
 import { Section } from "@/components/ui/Section";
+import { productDetails } from "@/content/productDetails";
 import {
   type ProductGroup,
   productGroups,
   productItems,
 } from "@/content/products";
-import { t, type TranslationKey } from "@/lib/i18n";
+import { type TranslationKey } from "@/lib/i18n";
 
 import styles from "./ProductsGrid.module.scss";
 
@@ -55,25 +56,20 @@ export function ProductsGrid() {
 
         <div key={active} className={styles.Grid}>
           {items.map((product, index) => (
-            <article
+            <div
               key={product.id}
-              className={styles.Card}
+              className={styles.Cell}
               style={{ "--_delay": `${index * STAGGER_STEP}ms` } as CSSProperties}
             >
-              <CoverImage
-                src={product.image}
-                alt={t(product.nameKey)}
-                sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
-                className={styles.Media}
-                imageClassName={styles.Image}
+              <ProductCard
+                href={`/products/${productDetails[product.id].slug}`}
+                image={product.image}
+                nameKey={product.nameKey}
+                groupLabelKey={
+                  `productsPage.groups.${product.group}` as TranslationKey
+                }
               />
-              <div className={styles.Body}>
-                <p className={styles.Tag}>
-                  {t(`productsPage.groups.${product.group}` as TranslationKey)}
-                </p>
-                <h2 className={styles.Name}>{t(product.nameKey)}</h2>
-              </div>
-            </article>
+            </div>
           ))}
         </div>
       </Container>

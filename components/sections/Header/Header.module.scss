@@ -5,6 +5,7 @@
   top: var(--header-offset);
   z-index: var(--z-header);
   padding-inline: 24px;
+  view-transition-name: site-header;
 
   @include tablet-sm {
     padding-inline: 12px;

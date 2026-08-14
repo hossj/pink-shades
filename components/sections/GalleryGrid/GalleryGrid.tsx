@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { type CSSProperties, useEffect, useMemo, useState } from "react";
+import { type CSSProperties, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -13,6 +13,8 @@ import {
   galleryItems,
 } from "@/content/gallery";
 import { t, type TranslationKey } from "@/lib/i18n";
+import { packMasonryColumns } from "@/lib/masonry";
+import { useColumnCount } from "@/lib/useColumnCount";
 
 import styles from "./GalleryGrid.module.scss";
 
@@ -33,24 +35,6 @@ function markLoadedRef(image: HTMLImageElement | null) {
 
 function markLoaded(event: React.SyntheticEvent<HTMLImageElement>) {
   reveal(event.currentTarget);
-}
-
-function useColumnCount() {
-  const [columns, setColumns] = useState(3);
-
-  useEffect(() => {
-    const queries = [
-      window.matchMedia("(max-width: 767px)"),
-      window.matchMedia("(max-width: 1199px)"),
-    ];
-    const update = () => setColumns(queries[0].matches ? 1 : queries[1].matches ? 2 : 3);
-    update();
-    queries.forEach((query) => query.addEventListener("change", update));
-    return () =>
-      queries.forEach((query) => query.removeEventListener("change", update));
-  }, []);
-
-  return columns;
 }
 
 const tabs: FilterTab[] = filters.map((filter) => ({
@@ -75,83 +59,16 @@ export function GalleryGrid() {
     [active],
   );
 
-  const columns = useMemo(() => {
-    const buckets = Array.from(
-      { length: columnCount },
-      () => [] as Array<{ item: (typeof galleryItems)[number]; index: number }>,
-    );
-    const heights = new Array(columnCount).fill(0);
-    const ratio = (entry: { item: (typeof galleryItems)[number] }) =>
-      entry.item.height / entry.item.width;
-    const spreadOf = (values: number[]) =>
-      Math.max(...values) - Math.min(...values);
-
-    const packBatch = (batch: Array<{ item: (typeof galleryItems)[number]; index: number }>) => {
-      const frozen = buckets.map((bucket) => bucket.length);
-
-      for (const entry of batch) {
-        const shortest = heights.indexOf(Math.min(...heights));
-        buckets[shortest].push(entry);
-        heights[shortest] += ratio(entry);
-      }
-
-      for (let pass = 0; pass < 60; pass++) {
-        const tallest = heights.indexOf(Math.max(...heights));
-        const shortest = heights.indexOf(Math.min(...heights));
-        if (tallest === shortest) break;
-        const current = spreadOf(heights);
-
-        let best = current;
-        let action: { tallIndex: number; shortIndex: number | null } | null =
-          null;
-
-        for (let i = frozen[tallest]; i < buckets[tallest].length; i++) {
-          const delta = ratio(buckets[tallest][i]);
-          const moved = [...heights];
-          moved[tallest] -= delta;
-          moved[shortest] += delta;
-          if (spreadOf(moved) < best) {
-            best = spreadOf(moved);
-            action = { tallIndex: i, shortIndex: null };
-          }
-          for (let j = frozen[shortest]; j < buckets[shortest].length; j++) {
-            const swapDelta = delta - ratio(buckets[shortest][j]);
-            const swapped = [...heights];
-            swapped[tallest] -= swapDelta;
-            swapped[shortest] += swapDelta;
-            if (spreadOf(swapped) < best) {
-              best = spreadOf(swapped);
-              action = { tallIndex: i, shortIndex: j };
-            }
-          }
-        }
-
-        if (!action) break;
-
-        const [tallItem] = buckets[tallest].splice(action.tallIndex, 1);
-        if (action.shortIndex === null) {
-          buckets[shortest].push(tallItem);
-          heights[tallest] -= ratio(tallItem);
-          heights[shortest] += ratio(tallItem);
-        } else {
-          const [shortItem] = buckets[shortest].splice(action.shortIndex, 1);
-          buckets[tallest].splice(action.tallIndex, 0, shortItem);
-          buckets[shortest].splice(action.shortIndex, 0, tallItem);
-          heights[tallest] += ratio(shortItem) - ratio(tallItem);
-          heights[shortest] += ratio(tallItem) - ratio(shortItem);
-        }
-      }
-    };
-
-    const shown = items
-      .slice(0, visibleCount)
-      .map((item, index) => ({ item, index }));
-    for (let start = 0; start < shown.length; start += PAGE_SIZE) {
-      packBatch(shown.slice(start, start + PAGE_SIZE));
-    }
-
-    return buckets;
-  }, [items, visibleCount, columnCount]);
+  const columns = useMemo(
+    () =>
+      packMasonryColumns(
+        items.slice(0, visibleCount),
+        columnCount,
+        (item) => item.height / item.width,
+        PAGE_SIZE,
+      ),
+    [items, visibleCount, columnCount],
+  );
 
 
   return (

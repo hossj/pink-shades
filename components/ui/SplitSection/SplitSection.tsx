@@ -6,12 +6,17 @@ import { cx } from "@/lib/cx";
 
 import styles from "./SplitSection.module.scss";
 
+type Spacing = "none" | "compact" | "regular" | "loose";
+
 interface Props {
   id?: string;
   image: string;
   imageAlt: string;
   imagePosition?: "left" | "right";
   imageContain?: boolean;
+  align?: "center" | "start";
+  spacing?: Spacing;
+  framed?: boolean;
   children: React.ReactNode;
 }
 
@@ -21,14 +26,18 @@ export function SplitSection({
   imageAlt,
   imagePosition = "right",
   imageContain = false,
+  align = "center",
+  spacing = "regular",
+  framed = false,
   children,
 }: Props) {
   return (
-    <Section id={id}>
+    <Section id={id} spacing={spacing}>
       <Container
         className={cx(
           styles.Layout,
           imagePosition === "left" && styles.imageLeft,
+          align === "start" && styles.alignStart,
         )}
       >
         <Reveal className={styles.Body}>{children}</Reveal>
@@ -37,7 +46,11 @@ export function SplitSection({
             src={image}
             alt={imageAlt}
             sizes="(max-width: 991px) 100vw, 55vw"
-            className={cx(styles.Media, imageContain && styles.contain)}
+            className={cx(
+              styles.Media,
+              imageContain && styles.contain,
+              framed && styles.framed,
+            )}
           />
         </Reveal>
       </Container>

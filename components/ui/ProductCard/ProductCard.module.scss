@@ -1,0 +1,63 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.ProductCard {
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background-color: var(--color-surface);
+  transition:
+    box-shadow var(--duration-normal) var(--ease-default),
+    transform var(--duration-normal) var(--ease-default);
+
+  &:hover {
+    box-shadow: var(--shadow-card);
+    transform: translateY(-3px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+}
+
+.Media {
+  aspect-ratio: 4 / 3;
+}
+
+.Image {
+  transition: transform var(--duration-slow) var(--ease-default);
+
+  .ProductCard:hover & {
+    transform: scale(1.05);
+  }
+
+  @include reduced-motion {
+    .ProductCard:hover & {
+      transform: none;
+    }
+  }
+}
+
+.Body {
+  display: block;
+  padding: 24px 26px 28px;
+}
+
+.Tag {
+  @include mono-label;
+
+  display: block;
+  font-size: var(--text-mono-sm);
+  color: var(--color-primary);
+}
+
+.Name {
+  @include display-text;
+
+  display: block;
+  margin-top: 8px;
+  font-size: var(--text-h5);
+  line-height: var(--leading-heading);
+}

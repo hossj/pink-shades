@@ -12,6 +12,10 @@
   }
 }
 
+.alignStart {
+  align-items: start;
+}
+
 .imageLeft {
   grid-template-columns: 1.3fr 1fr;
 
@@ -38,6 +42,15 @@
 
   @include tablet-sm {
     height: 320px;
+  }
+}
+
+.framed {
+  border-radius: var(--radius-lg);
+  box-shadow: 16px 16px 0 var(--color-primary-pale);
+
+  @include tablet-sm {
+    box-shadow: 10px 10px 0 var(--color-primary-pale);
   }
 }
 

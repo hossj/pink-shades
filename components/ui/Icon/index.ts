@@ -1,4 +1,6 @@
 export {
+  ChevronLeftIcon,
+  ChevronRightIcon,
   CloseIcon,
   DeliveryIcon,
   HomeIcon,
