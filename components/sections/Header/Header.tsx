@@ -5,6 +5,7 @@ import { navLinks, site } from "@/content/site";
 import { t } from "@/lib/i18n";
 
 import styles from "./Header.module.scss";
+import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
   return (
@@ -30,6 +31,7 @@ export function Header() {
           <EstimateButton className={styles.Cta}>
             {t("nav.freeEstimate")}
           </EstimateButton>
+          <MobileMenu />
         </div>
       </div>
     </header>

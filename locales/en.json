@@ -177,7 +177,10 @@
     "previous": "Previous image",
     "next": "Next image",
     "home": "Home",
-    "breadcrumbs": "Breadcrumbs"
+    "breadcrumbs": "Breadcrumbs",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuLabel": "Main menu"
   },
   "about": {
     "meta": {
@@ -394,7 +397,12 @@
       "ratingLabel": "5.0 customer rating",
       "perk1": "Custom fabricated to your windows",
       "perk2": "Professionally installed",
-      "perk3": "Free in-home estimate"
+      "perk3": "Free in-home estimate",
+      "motorization": {
+        "eyebrow": "Motorization",
+        "text": "This treatment can be motorized — hardwired or rechargeable battery, moved by remote, app or schedule.",
+        "link": "Explore motorization"
+      }
     }
   },
   "contact": {
@@ -448,6 +456,85 @@
         "phoneRequired": "Enter your phone number",
         "messageRequired": "Tell us how we can help"
       }
+    }
+  },
+  "motorizationPage": {
+    "meta": {
+      "title": "Motorization | Pink Blinds & Shutters",
+      "description": "Motorized shades and shutters — hardwired low voltage or rechargeable battery with remote — quieter mornings, safer windows, lower bills."
+    },
+    "hero": {
+      "eyebrow": "Motorization",
+      "titleStart": "Windows that move",
+      "titleAccent": "themselves",
+      "titleEnd": ".",
+      "description": "Every treatment we install can be motorized — raised, lowered and tilted from a remote, a wall switch, or a schedule. No cords, no reaching, no ladders."
+    },
+    "demo": {
+      "eyebrow": "Try it",
+      "title": "You have the remote",
+      "description": "Press the buttons. This is the whole pitch — light when you want it, privacy when you don't, without leaving the couch.",
+      "open": "Raise shade",
+      "stop": "Stop shade",
+      "close": "Lower shade",
+      "positionLabel": "Position"
+    },
+    "power": {
+      "eyebrow": "Two ways to power it",
+      "title": "Hardwired or battery — both installed by us",
+      "description": "We fit the motor to your home, not the other way around. Both options run the same treatments and the same remotes.",
+      "hardwired": {
+        "number": "01",
+        "title": "Hardwired low voltage",
+        "description": "Wired into your home's low-voltage system — no batteries to charge, ever. Motors run quieter and are always ready. The cleanest choice for new builds and renovations.",
+        "note": "Best for: new construction & remodels"
+      },
+      "battery": {
+        "number": "02",
+        "title": "Rechargeable battery + remote",
+        "description": "A rechargeable motor fits any existing window with no wiring and no opened walls, controlled from a handheld remote. A charge lasts months, and solar trickle-chargers mean you may never reach for a ladder.",
+        "note": "Best for: existing homes & retrofits"
+      }
+    },
+    "benefits": {
+      "eyebrow": "Why motorize",
+      "title": "More than a convenience",
+      "description": "The quiet upgrades add up — every day, on every window.",
+      "safety": {
+        "tag": "Cord-free",
+        "title": "Safer for kids and pets",
+        "description": "No dangling cords means no strangulation hazard — the simplest way to make window treatments safer."
+      },
+      "schedule": {
+        "tag": "On a schedule",
+        "title": "Set it and forget it",
+        "description": "Program shades to wake with the sun and close at dusk — your windows keep the routine for you."
+      },
+      "energy": {
+        "tag": "Lower bills",
+        "title": "Insulation on cue",
+        "description": "Shades that close against the afternoon sun ease the load on your HVAC and trim energy costs."
+      },
+      "uv": {
+        "tag": "UV protection",
+        "title": "Stop the fading",
+        "description": "Automatic closes during peak sun protect floors, rugs, upholstery and art from bleaching out."
+      },
+      "reach": {
+        "tag": "No ladders",
+        "title": "Hard-to-reach windows, handled",
+        "description": "Two-story foyers, stairwells and skylights operate from your hand instead of a ladder."
+      },
+      "smart": {
+        "tag": "Smart home",
+        "title": "App and voice control options",
+        "description": "Group rooms, set scenes, and integrate with smart-home platforms for app or voice control."
+      }
+    },
+    "treatments": {
+      "eyebrow": "Works with",
+      "title": "Motorize almost any treatment",
+      "description": "From roller shades to drapery tracks — if we sell it, chances are we can motorize it."
     }
   }
 }
