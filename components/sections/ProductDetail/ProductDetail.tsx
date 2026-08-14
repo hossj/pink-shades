@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { EstimateButton } from "@/components/estimate";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { RemoteIcon } from "@/components/ui/Icon";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
@@ -94,6 +96,29 @@ export function ProductDetail({ productId }: Props) {
           {t("productsPage.detail.cta")}
         </EstimateButton>
       </SplitSection>
+
+      {productId !== "windowFilms" && (
+        <Section spacing="none">
+          <Container>
+            <Reveal className={styles.Motorized}>
+              <span className={styles.MotorizedIcon}>
+                <RemoteIcon size={22} />
+              </span>
+              <div className={styles.MotorizedBody}>
+                <p className={styles.MotorizedEyebrow}>
+                  {t("productsPage.detail.motorization.eyebrow")}
+                </p>
+                <p className={styles.MotorizedText}>
+                  {t("productsPage.detail.motorization.text")}
+                </p>
+              </div>
+              <Link href="/motorization" className={styles.MotorizedLink}>
+                {t("productsPage.detail.motorization.link")}
+              </Link>
+            </Reveal>
+          </Container>
+        </Section>
+      )}
 
       {(blocks.length > 0 || gallery) && (
         <Section background="surface" spacing="compact">
