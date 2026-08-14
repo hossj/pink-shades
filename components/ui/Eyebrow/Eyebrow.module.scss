@@ -1,0 +1,24 @@
+@use "@/styles/theme/mixins" as *;
+
+.Eyebrow {
+  @include mono-label;
+
+  font-size: var(--text-mono);
+  letter-spacing: var(--tracking-mono);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.muted {
+  color: var(--color-foreground-subtle);
+}
+
+.light {
+  color: var(--color-primary-light);
+}
+
+.on-dark {
+  color: var(--color-on-dark-muted);
+}

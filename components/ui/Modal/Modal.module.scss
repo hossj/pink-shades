@@ -1,0 +1,54 @@
+@use "@/styles/theme/responsive" as *;
+
+.Backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: var(--color-scrim-medium);
+  backdrop-filter: blur(6px);
+  animation: fade-up var(--duration-normal) var(--ease-default) both;
+}
+
+.Dialog {
+  position: relative;
+  width: 100%;
+  max-width: 1040px;
+  max-height: 90vh;
+  overflow: hidden;
+  background-color: var(--color-background);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-modal);
+}
+
+.Close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: var(--z-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  transition:
+    background-color var(--duration-fast) var(--ease-default),
+    color var(--duration-fast) var(--ease-default);
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  @include tablet-sm {
+    top: 12px;
+    right: 12px;
+  }
+}

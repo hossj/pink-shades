@@ -1,0 +1,35 @@
+"use client";
+
+import { createContext, useCallback, useContext, useMemo, useState } from "react";
+
+interface EstimateContextValue {
+  open: boolean;
+  openEstimate: () => void;
+  closeEstimate: () => void;
+}
+
+const EstimateContext = createContext<EstimateContextValue | null>(null);
+
+export function EstimateProvider({ children }: { children: React.ReactNode }) {
+  const [open, setOpen] = useState(false);
+
+  const openEstimate = useCallback(() => setOpen(true), []);
+  const closeEstimate = useCallback(() => setOpen(false), []);
+
+  const value = useMemo(
+    () => ({ open, openEstimate, closeEstimate }),
+    [open, openEstimate, closeEstimate],
+  );
+
+  return (
+    <EstimateContext.Provider value={value}>{children}</EstimateContext.Provider>
+  );
+}
+
+export function useEstimate() {
+  const context = useContext(EstimateContext);
+  if (!context) {
+    throw new Error("useEstimate must be used within an EstimateProvider");
+  }
+  return context;
+}

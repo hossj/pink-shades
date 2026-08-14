@@ -1,0 +1,24 @@
+@use "@/styles/theme/mixins" as *;
+
+.SectionIntro {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.Title {
+  @include display-text;
+
+  margin-top: 12px;
+  font-size: var(--text-h2);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-snug);
+  text-wrap: balance;
+}
+
+.Description {
+  margin-top: 16px;
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  color: var(--color-foreground-body);
+}

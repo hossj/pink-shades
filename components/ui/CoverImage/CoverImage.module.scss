@@ -1,0 +1,40 @@
+.CoverImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.Image {
+  object-fit: cover;
+}
+
+.Scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero {
+  background: linear-gradient(
+    to top,
+    var(--color-scrim-strong) 0%,
+    var(--color-scrim-medium) 50%,
+    var(--color-scrim-faint) 100%
+  );
+}
+
+.panel {
+  background: linear-gradient(
+    to top,
+    var(--color-scrim-strong) 0%,
+    var(--color-scrim-faint) 45%,
+    var(--color-scrim-clear) 70%
+  );
+}
+
+.soft {
+  background: linear-gradient(
+    to top,
+    var(--color-scrim-medium) 0%,
+    var(--color-scrim-clear) 55%
+  );
+}

@@ -1,0 +1,29 @@
+@use "@/styles/theme/mixins" as *;
+
+.Field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.Label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+  font-weight: var(--weight-semibold);
+}
+
+.Hint {
+  font-weight: var(--weight-regular);
+  color: var(--color-foreground-subtle);
+}
+
+.Control {
+  @include field-control;
+}
+
+.Textarea {
+  resize: vertical;
+  min-height: 96px;
+}

@@ -1,0 +1,80 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Dialog {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+
+  @include tablet-lg {
+    grid-template-columns: 1fr;
+  }
+}
+
+.Media {
+  min-height: 300px;
+
+  @include tablet-lg {
+    min-height: 200px;
+  }
+
+  @include tablet-sm {
+    display: none;
+  }
+}
+
+.Body {
+  padding: 56px 52px 48px;
+  overflow: auto;
+  max-height: 90vh;
+
+  @include tablet-sm {
+    padding: 48px 24px 32px;
+  }
+}
+
+.Title {
+  @include display-text;
+
+  margin-top: 10px;
+  font-size: var(--text-h4);
+  line-height: var(--leading-heading);
+}
+
+.Description {
+  margin-top: 10px;
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-foreground-muted);
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.Row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  @include mobile-lg {
+    grid-template-columns: 1fr;
+  }
+}
+
+.Submit {
+  margin-top: 6px;
+}
+
+.Footnote {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-foreground-subtle);
+}
+
+.PhoneLink {
+  color: var(--color-primary);
+  font-weight: var(--weight-semibold);
+}

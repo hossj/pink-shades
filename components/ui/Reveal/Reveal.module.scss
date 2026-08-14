@@ -1,0 +1,20 @@
+@use "@/styles/theme/responsive" as *;
+
+.Reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity var(--duration-reveal) var(--ease-default),
+    transform var(--duration-reveal) var(--ease-out-expo);
+
+  @include reduced-motion {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.visible {
+  opacity: 1;
+  transform: none;
+}

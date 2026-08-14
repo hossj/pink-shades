@@ -1,0 +1,6 @@
+.Container {
+  width: 100%;
+  max-width: calc(var(--container-max-width) + 2 * var(--container-padding));
+  padding-inline: var(--container-padding);
+  margin-inline: auto;
+}
