@@ -1,5 +1,15 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { DeliveryIcon, HomeIcon, RulerIcon } from "@/components/ui/Icon";
+import {
+  BoltIcon,
+  ClockIcon,
+  DeliveryIcon,
+  HomeIcon,
+  LadderIcon,
+  RemoteIcon,
+  RulerIcon,
+  ShieldIcon,
+  SunIcon,
+} from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { t, type TranslationKey } from "@/lib/i18n";
 
@@ -9,6 +19,12 @@ const icons = {
   home: HomeIcon,
   ruler: RulerIcon,
   delivery: DeliveryIcon,
+  shield: ShieldIcon,
+  clock: ClockIcon,
+  sun: SunIcon,
+  bolt: BoltIcon,
+  ladder: LadderIcon,
+  remote: RemoteIcon,
 };
 
 export type PerkIcon = keyof typeof icons;

@@ -1,9 +1,15 @@
 export {
+  BoltIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  ClockIcon,
   CloseIcon,
   DeliveryIcon,
   HomeIcon,
+  LadderIcon,
   PhoneIcon,
+  RemoteIcon,
   RulerIcon,
+  ShieldIcon,
+  SunIcon,
 } from "./Icon";

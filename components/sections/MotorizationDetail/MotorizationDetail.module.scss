@@ -1,0 +1,124 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Intro {
+  margin-bottom: 52px;
+}
+
+.PowerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 980px;
+  margin-inline: auto;
+
+  @include tablet-sm {
+    grid-template-columns: 1fr;
+  }
+}
+
+.PowerCard {
+  padding: 38px 34px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border-radius: var(--radius-xl);
+
+  &:last-child {
+    background-color: var(--color-surface);
+    color: var(--color-foreground);
+    border: 1px solid var(--color-border);
+
+    .PowerNumber {
+      color: var(--color-primary);
+    }
+
+    .PowerDescription {
+      color: var(--color-foreground-body);
+    }
+
+    .PowerNote {
+      color: var(--color-foreground-subtle);
+      border-color: var(--color-border);
+    }
+  }
+}
+
+.PowerNumber {
+  @include display-text;
+
+  font-size: var(--text-h4);
+  line-height: 1;
+  color: var(--color-primary-light);
+}
+
+.PowerTitle {
+  @include display-text;
+
+  margin-top: 14px;
+  font-size: var(--text-h5);
+}
+
+.PowerDescription {
+  margin-top: 10px;
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-on-primary-muted);
+}
+
+.PowerNote {
+  @include mono-label;
+
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-on-primary-border);
+  font-size: var(--text-mono-sm);
+  color: var(--color-primary-pale);
+}
+
+.BenefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+  @include desktop-sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include tablet-sm {
+    grid-template-columns: 1fr;
+  }
+}
+
+.Chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.Chip {
+  padding: 12px 24px;
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-foreground-body);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition:
+    background-color var(--duration-fast) var(--ease-default),
+    border-color var(--duration-fast) var(--ease-default),
+    color var(--duration-fast) var(--ease-default);
+
+  &:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}

@@ -75,6 +75,59 @@ export function ChevronRightIcon(props: IconProps) {
   );
 }
 
+export function ShieldIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M12 3 L19 6 V11 C19 15.5 16.5 19 12 21 C7.5 19 5 15.5 5 11 V6 Z" />
+      <path d="M9 11.5 L11.2 13.7 L15 9.5" />
+    </Icon>
+  );
+}
+
+export function ClockIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5 V12 L15 14" />
+    </Icon>
+  );
+}
+
+export function SunIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 3 V5 M12 19 V21 M3 12 H5 M19 12 H21 M5.6 5.6 L7 7 M17 17 L18.4 18.4 M18.4 5.6 L17 7 M7 17 L5.6 18.4" />
+    </Icon>
+  );
+}
+
+export function BoltIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M13 3 L5 13.5 H11 L10 21 L19 9.5 H12.5 Z" />
+    </Icon>
+  );
+}
+
+export function LadderIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M8 3 V21 M16 3 V21" />
+      <path d="M8 7 H16 M8 12 H16 M8 17 H16" />
+    </Icon>
+  );
+}
+
+export function RemoteIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <rect x="8.5" y="3.5" width="7" height="17" rx="2.5" />
+      <path d="M12 8 L12 8.01 M12 12 L12 12.01 M12 16 L12 16.01" strokeWidth={2.4} />
+    </Icon>
+  );
+}
+
 export function CloseIcon(props: IconProps) {
   return (
     <Icon strokeWidth={1.6} {...props}>

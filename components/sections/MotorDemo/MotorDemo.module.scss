@@ -1,0 +1,286 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 72px;
+  align-items: center;
+
+  @include tablet-lg {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.Copy {
+  min-width: 0;
+}
+
+.Title {
+  @include display-text;
+
+  margin-top: 14px;
+  font-size: var(--text-h3);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  text-wrap: balance;
+}
+
+.Description {
+  max-width: 44ch;
+  margin-top: 18px;
+  font-size: var(--text-body);
+  line-height: var(--leading-loose);
+  color: var(--color-foreground-body);
+}
+
+.Remote {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 14px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-header);
+}
+
+.RemoteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: var(--color-foreground);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition:
+    background-color var(--duration-fast) var(--ease-default),
+    color var(--duration-fast) var(--ease-default),
+    transform var(--duration-fast) var(--ease-default);
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+
+    .StopSquare {
+      background-color: var(--color-on-primary);
+    }
+  }
+
+  &:active {
+    transform: scale(0.92);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+.ArrowUp,
+.ArrowDown {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.ArrowUp {
+  border-bottom: 11px solid currentColor;
+}
+
+.ArrowDown {
+  border-top: 11px solid currentColor;
+}
+
+.StopSquare {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: var(--color-foreground);
+  transition: background-color var(--duration-fast) var(--ease-default);
+}
+
+.Stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+
+  @include mobile-lg {
+    gap: 16px;
+  }
+}
+
+.WindowColumn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+  max-width: 420px;
+}
+
+.Window {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  padding: 16px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  z-index: var(--z-raised);
+}
+
+.View {
+  position: absolute;
+  inset: 16px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--color-scene-sky) 0%,
+    var(--color-scene-sky-low) 70%
+  );
+}
+
+.Sun {
+  position: absolute;
+  top: 14%;
+  right: 16%;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(
+    circle,
+    var(--color-scene-sun) 0%,
+    var(--color-scene-sun) 55%,
+    transparent 72%
+  );
+  box-shadow: 0 0 48px 22px var(--color-scene-sun-glow);
+}
+
+.Hills {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: -12%;
+  height: 42%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+  }
+
+  &::before {
+    left: -8%;
+    width: 75%;
+    height: 100%;
+    background-color: var(--color-scene-hill);
+  }
+
+  &::after {
+    right: -12%;
+    width: 80%;
+    height: 72%;
+    background-color: var(--color-scene-hill-dark);
+  }
+}
+
+.Track {
+  position: absolute;
+  inset: 16px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.Shade {
+  position: relative;
+  width: 100%;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      var(--color-surface) 0,
+      var(--color-surface) 14px,
+      var(--color-primary-pale) 14px,
+      var(--color-primary-pale) 16px
+    );
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+  transition: height var(--_duration, 0ms) linear;
+
+  @include reduced-motion {
+    transition: none;
+  }
+}
+
+.ShadeBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+.Mullion {
+  position: absolute;
+  inset: 16px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-border);
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--color-border);
+  }
+}
+
+.LightPool {
+  position: absolute;
+  top: calc(100% - 46px);
+  left: 50%;
+  width: min(480px, 110%);
+  height: 110px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse 50% 50% at 50% 50%,
+    var(--color-scene-sun-glow) 0%,
+    transparent 70%
+  );
+  opacity: var(--_daylight, 0.4);
+  transition: opacity var(--_duration, 0ms) linear;
+  pointer-events: none;
+
+  @include reduced-motion {
+    transition: none;
+  }
+}
+
+.Position {
+  @include mono-label;
+
+  position: relative;
+  z-index: var(--z-raised);
+  font-size: var(--text-mono);
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-foreground-subtle);
+}
