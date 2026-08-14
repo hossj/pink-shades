@@ -1,0 +1,10 @@
+export { Benefits } from "./Benefits";
+export { CallToAction } from "./CallToAction";
+export { Commercial } from "./Commercial";
+export { Footer } from "./Footer";
+export { Header } from "./Header";
+export { Hero } from "./Hero";
+export { Motorization } from "./Motorization";
+export { Products } from "./Products";
+export { Stats } from "./Stats";
+export { Testimonials } from "./Testimonials";

@@ -1,0 +1,78 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100vh;
+  margin-top: calc(-1 * (var(--header-height) + var(--header-offset)));
+  overflow: hidden;
+
+  @include tablet-sm {
+    min-height: 640px;
+  }
+}
+
+.Background {
+  position: absolute;
+  inset: 0;
+}
+
+.Content {
+  position: relative;
+  width: 100%;
+  max-width: calc(var(--container-max-width) + 2 * var(--container-padding));
+  margin-inline: auto;
+  padding: 80px var(--container-padding) 72px;
+
+  @include tablet-sm {
+    padding-block: 160px 56px;
+  }
+}
+
+.Eyebrow {
+  @include mono-label;
+
+  font-size: var(--text-mono);
+  letter-spacing: var(--tracking-mono);
+  color: var(--color-on-dark-muted);
+  animation: fade-up 700ms var(--ease-default) both;
+}
+
+.Title {
+  @include display-text;
+
+  margin-top: 24px;
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  color: var(--color-foreground-inverse);
+  text-shadow: var(--shadow-hero-text);
+  animation: fade-up 700ms 100ms var(--ease-default) both;
+}
+
+.TitleAccent {
+  color: var(--color-primary-bright);
+}
+
+.TitleItalic {
+  font-style: italic;
+}
+
+.Description {
+  max-width: 46ch;
+  margin-top: 28px;
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-on-dark-strong);
+  animation: fade-up 700ms 200ms var(--ease-default) both;
+}
+
+.Actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 36px;
+  animation: fade-up 700ms 300ms var(--ease-default) both;
+}

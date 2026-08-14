@@ -1,0 +1,54 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Stats {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-block: 64px;
+
+  @include tablet-sm {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-block: 48px;
+  }
+}
+
+.Item {
+  padding-inline: 24px;
+  text-align: center;
+
+  &:not(:last-child) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  @include tablet-sm {
+    &:not(:last-child) {
+      border-right: none;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 32px;
+    }
+  }
+}
+
+.Value {
+  @include display-text;
+
+  font-size: var(--text-h1);
+  line-height: 1;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.Label {
+  @include mono-label;
+
+  margin-top: 12px;
+  font-size: var(--text-caption);
+  color: var(--color-foreground-subtle);
+}

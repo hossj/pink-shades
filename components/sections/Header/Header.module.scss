@@ -1,0 +1,103 @@
+@use "@/styles/theme/responsive" as *;
+
+.Header {
+  position: sticky;
+  top: var(--header-offset);
+  z-index: var(--z-header);
+  padding-inline: 24px;
+
+  @include tablet-sm {
+    padding-inline: 12px;
+  }
+}
+
+.Bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: var(--container-max-width);
+  height: var(--header-height);
+  margin-inline: auto;
+  padding: 0 16px 0 28px;
+  background-color: var(--color-glass);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-header);
+
+  @include tablet-sm {
+    height: 68px;
+    padding: 0 12px 0 18px;
+    gap: 12px;
+  }
+}
+
+.Brand {
+  display: flex;
+  align-items: center;
+
+  @include tablet-sm {
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: var(--text-body);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+
+  @include desktop-sm {
+    gap: 24px;
+  }
+
+  @include tablet-lg {
+    display: none;
+  }
+}
+
+.NavLink {
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.Actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  @include tablet-sm {
+    gap: 12px;
+  }
+}
+
+.Phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: var(--text-body);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-snug);
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  @include mobile-lg {
+    display: none;
+  }
+}
+
+.Cta {
+  @include tablet-sm {
+    padding: 11px 20px;
+    font-size: var(--text-body-sm);
+  }
+}

@@ -1,0 +1,105 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Intro {
+  margin-bottom: 56px;
+}
+
+.Stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.Card {
+  position: sticky;
+  top: var(--_top);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 64px 72px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-stack);
+
+  @include tablet-sm {
+    position: static;
+    padding: 40px 24px;
+  }
+}
+
+.light {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+
+  --_star: var(--color-primary);
+  --_avatar-bg: var(--color-primary-pale);
+  --_avatar-fg: var(--color-primary);
+}
+
+.bright {
+  background-color: var(--color-primary-bright);
+  color: var(--color-on-primary);
+
+  --_star: var(--color-on-primary);
+  --_avatar-bg: var(--color-on-primary-border);
+  --_avatar-fg: var(--color-on-primary);
+}
+
+.surface {
+  background-color: var(--color-surface);
+  color: var(--color-foreground);
+
+  --_star: var(--color-primary);
+  --_avatar-bg: var(--color-primary-pale);
+  --_avatar-fg: var(--color-primary);
+}
+
+.Stars {
+  margin-bottom: 24px;
+  font-size: var(--text-h5);
+  letter-spacing: 6px;
+  color: var(--_star);
+}
+
+.Quote {
+  @include display-text;
+
+  max-width: 26ch;
+  font-size: var(--text-h4);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-normal);
+  text-wrap: balance;
+}
+
+.Caption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.Avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--_avatar-bg);
+  color: var(--_avatar-fg);
+  font-size: 16px;
+  font-weight: var(--weight-bold);
+}
+
+.Name {
+  @include mono-label;
+
+  font-size: 14px;
+  letter-spacing: var(--tracking-wider);
+  text-transform: none;
+  opacity: 0.75;
+}

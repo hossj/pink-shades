@@ -1,0 +1,77 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Products {
+  display: flex;
+  height: 640px;
+
+  @include tablet-lg {
+    height: 520px;
+  }
+
+  @include tablet-sm {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.Panel {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  text-align: left;
+  transition: flex var(--duration-slow) var(--ease-default);
+
+  @include tablet-sm {
+    flex: none;
+    height: 320px;
+  }
+}
+
+.active {
+  flex: 2.4;
+}
+
+.Media {
+  position: absolute;
+  inset: 0;
+}
+
+.Image {
+  transition: filter var(--duration-slow) var(--ease-default);
+}
+
+.muted {
+  filter: grayscale(1) brightness(0.92);
+}
+
+.Body {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 28px 26px;
+}
+
+.Tag {
+  @include mono-label;
+
+  font-size: var(--text-mono-sm);
+  color: var(--color-primary-light);
+}
+
+.Name {
+  @include display-text;
+
+  margin-top: 8px;
+  min-height: 75px;
+  font-size: var(--text-h4);
+  line-height: var(--leading-heading);
+  color: var(--color-foreground-inverse);
+}
+
+.Description {
+  max-width: 44ch;
+  margin-top: 10px;
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-on-dark-strong);
+}
