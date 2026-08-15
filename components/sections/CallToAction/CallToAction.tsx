@@ -1,6 +1,7 @@
 import { EstimateButton } from "@/components/estimate";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { PhoneIcon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { site } from "@/content/site";
@@ -23,7 +24,12 @@ export function CallToAction() {
             <EstimateButton size="large">
               {t("callToAction.primaryCta")}
             </EstimateButton>
-            <Button href={site.phoneHref} variant="outline" size="large">
+            <Button
+              href={site.phoneHref}
+              variant="outline"
+              size="large"
+              icon={<PhoneIcon size={18} />}
+            >
               {t("site.phone")}
             </Button>
           </div>
