@@ -11,7 +11,7 @@ export function Header() {
   return (
     <header className={styles.Header}>
       <div className={styles.Bar}>
-        <a href="#" aria-label={t("site.name")} className={styles.Brand}>
+        <a href="/" aria-label={t("site.name")} className={styles.Brand}>
           <Logo height={58} priority />
         </a>
 

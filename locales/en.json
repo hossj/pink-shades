@@ -133,20 +133,12 @@
   },
   "footer": {
     "about": "Our top management has been involved in this industry for 35 years, offering quality and innovative products at reasonable prices.",
+    "shop": "Shop",
     "company": "Company",
-    "partnerships": "Partnerships",
     "contact": "Contact",
     "aboutUs": "About us",
-    "gallery": "Gallery",
-    "pricing": "Pricing",
-    "news": "News",
-    "franchise": "Franchise",
-    "designers": "Designers",
-    "builders": "Builders & developers",
-    "realtors": "Realtors",
     "facebook": "Facebook",
-    "instagram": "Instagram",
-    "youtube": "YouTube"
+    "instagram": "Instagram"
   },
   "estimate": {
     "imageAlt": "Motorized roller shades",

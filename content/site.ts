@@ -15,23 +15,21 @@ export const navLinks = [
 
 export const footerColumns = [
   {
+    id: "shop",
+    titleKey: "footer.shop",
+    links: [
+      { href: "/products", labelKey: "nav.products" },
+      { href: "/motorization", labelKey: "nav.motorization" },
+      { href: "/gallery", labelKey: "nav.gallery" },
+    ],
+  },
+  {
     id: "company",
     titleKey: "footer.company",
     links: [
       { href: "/about", labelKey: "footer.aboutUs" },
-      { href: "/gallery", labelKey: "footer.gallery" },
-      { href: "#", labelKey: "footer.pricing" },
-      { href: "#", labelKey: "footer.news" },
-    ],
-  },
-  {
-    id: "partnerships",
-    titleKey: "footer.partnerships",
-    links: [
-      { href: "#", labelKey: "footer.franchise" },
-      { href: "#", labelKey: "footer.designers" },
-      { href: "#", labelKey: "footer.builders" },
-      { href: "#", labelKey: "footer.realtors" },
+      { href: "/#reviews", labelKey: "nav.reviews" },
+      { href: "/contact", labelKey: "nav.contact" },
     ],
   },
 ] as const;
@@ -44,9 +42,5 @@ export const socialLinks = [
   {
     href: "https://instagram.com/pinkblindsandshutters",
     labelKey: "footer.instagram",
-  },
-  {
-    href: "https://youtube.com/pinkblindsandshutters",
-    labelKey: "footer.youtube",
   },
 ] as const;
