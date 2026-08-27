@@ -35,6 +35,10 @@ export const productDetails = {
       { src: "/images/products/gallery/plantationShutters-6.jpg", width: 900, height: 600 },
       { src: "/images/products/gallery/plantationShutters-7.jpg", width: 900, height: 675 },
       { src: "/images/products/gallery/plantationShutters-8.jpg", width: 900, height: 437 },
+      { src: "/images/products/gallery/plantationShutters-9.jpg", width: 1400, height: 1050 },
+      { src: "/images/products/gallery/plantationShutters-10.jpg", width: 1400, height: 1050 },
+      { src: "/images/products/gallery/plantationShutters-11.jpg", width: 1400, height: 932 },
+      { src: "/images/products/gallery/plantationShutters-12.jpg", width: 1400, height: 1050 },
     ],
     blocks: [
     { kind: "p", key: "productsPage.details.plantationShutters.block1" },
@@ -54,6 +58,8 @@ export const productDetails = {
     photos: [
       { src: "/images/products/gallery/biFoldShutters-1.jpg", width: 900, height: 363 },
       { src: "/images/products/gallery/biFoldShutters-2.jpg", width: 500, height: 450 },
+      { src: "/images/products/gallery/biFoldShutters-3.jpg", width: 1050, height: 1400 },
+      { src: "/images/products/gallery/biFoldShutters-4.jpg", width: 1050, height: 1400 },
     ],
   },
   bypassTrackShutters: {
@@ -67,6 +73,7 @@ export const productDetails = {
       { src: "/images/products/gallery/bypassTrackShutters-4.jpg", width: 883, height: 500 },
       { src: "/images/products/gallery/bypassTrackShutters-5.jpg", width: 400, height: 480 },
       { src: "/images/products/gallery/bypassTrackShutters-6.jpg", width: 770, height: 500 },
+      { src: "/images/products/gallery/bypassTrackShutters-7.jpg", width: 1050, height: 1400 },
     ],
   },
   slidingBarnDoorShutters: {
@@ -153,6 +160,10 @@ export const productDetails = {
       { src: "/images/products/gallery/rollerShades-6.jpg", width: 434, height: 600 },
       { src: "/images/products/gallery/rollerShades-7.jpg", width: 874, height: 665 },
       { src: "/images/products/gallery/rollerShades-8.jpg", width: 499, height: 600 },
+      { src: "/images/products/gallery/rollerShades-9.jpg", width: 1050, height: 1400 },
+      { src: "/images/products/gallery/rollerShades-10.jpg", width: 1050, height: 1400 },
+      { src: "/images/products/gallery/rollerShades-11.jpg", width: 787, height: 1400 },
+      { src: "/images/products/gallery/rollerShades-12.jpg", width: 1050, height: 1400 },
     ],
   },
   solarShades: {
@@ -185,6 +196,9 @@ export const productDetails = {
       { src: "/images/products/gallery/wovenWoodShades-3.jpg", width: 720, height: 900 },
       { src: "/images/products/gallery/wovenWoodShades-4.jpg", width: 900, height: 720 },
       { src: "/images/products/gallery/wovenWoodShades-5.png", width: 900, height: 1200 },
+      { src: "/images/products/gallery/wovenWoodShades-6.jpg", width: 1050, height: 1400 },
+      { src: "/images/products/gallery/wovenWoodShades-7.jpg", width: 1050, height: 1400 },
+      { src: "/images/products/gallery/wovenWoodShades-8.jpg", width: 1050, height: 1400 },
     ],
   },
   honeycombShades: {
@@ -200,6 +214,10 @@ export const productDetails = {
       { src: "/images/products/gallery/honeycombShades-6.jpg", width: 900, height: 675 },
       { src: "/images/products/gallery/honeycombShades-7.png", width: 900, height: 531 },
       { src: "/images/products/gallery/honeycombShades-8.png", width: 529, height: 900 },
+      { src: "/images/products/gallery/honeycombShades-9.jpg", width: 1400, height: 787 },
+      { src: "/images/products/gallery/honeycombShades-10.jpg", width: 1050, height: 1400 },
+      { src: "/images/products/gallery/honeycombShades-11.jpg", width: 1050, height: 1400 },
+      { src: "/images/products/gallery/honeycombShades-12.jpg", width: 1400, height: 1050 },
     ],
   },
   sheerShadings: {
@@ -215,6 +233,7 @@ export const productDetails = {
       { src: "/images/products/gallery/sheerShadings-6.jpg", width: 900, height: 675 },
       { src: "/images/products/gallery/sheerShadings-7.jpg", width: 900, height: 675 },
       { src: "/images/products/gallery/sheerShadings-8.jpg", width: 900, height: 675 },
+      { src: "/images/products/gallery/sheerShadings-9.jpg", width: 1400, height: 1218 },
     ],
   },
   panelTracks: {
@@ -230,6 +249,9 @@ export const productDetails = {
       { src: "/images/products/gallery/panelTracks-6.jpg", width: 576, height: 864 },
       { src: "/images/products/gallery/panelTracks-7.jpg", width: 900, height: 819 },
       { src: "/images/products/gallery/panelTracks-8.jpg", width: 900, height: 819 },
+      { src: "/images/products/gallery/panelTracks-9.jpg", width: 1400, height: 1050 },
+      { src: "/images/products/gallery/panelTracks-10.jpg", width: 1050, height: 1400 },
+      { src: "/images/products/gallery/panelTracks-11.jpg", width: 1050, height: 1400 },
     ],
   },
   draperyAndCurtains: {
@@ -245,6 +267,10 @@ export const productDetails = {
       { src: "/images/products/gallery/draperyAndCurtains-6.jpg", width: 900, height: 599 },
       { src: "/images/products/gallery/draperyAndCurtains-7.jpg", width: 557, height: 900 },
       { src: "/images/products/gallery/draperyAndCurtains-8.jpg", width: 900, height: 591 },
+      { src: "/images/products/gallery/draperyAndCurtains-9.jpg", width: 1050, height: 1400 },
+      { src: "/images/products/gallery/draperyAndCurtains-10.jpg", width: 1400, height: 1050 },
+      { src: "/images/products/gallery/draperyAndCurtains-11.jpg", width: 1400, height: 1050 },
+      { src: "/images/products/gallery/draperyAndCurtains-12.jpg", width: 1009, height: 1400 },
     ],
   },
   retractableScreens: {
