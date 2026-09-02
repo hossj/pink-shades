@@ -200,12 +200,14 @@
     },
     "leadership": {
       "eyebrow": "Leadership",
-      "title": "Meet the founder",
-      "sia": {
-        "imageAlt": "Sia Harandi",
-        "name": "Sia Harandi",
-        "role": "CEO, Founder",
-        "bio": "Sia Harandi attended George Washington University, where he earned a Mechanical Engineering degree, and has led the company through 35 years in the window treatment industry."
+      "title": "Meet the team",
+      "members": {
+        "sia": {
+          "imageAlt": "Sia Harandi",
+          "name": "Sia Harandi",
+          "role": "Senior Advisor",
+          "bio": "Sia Harandi attended George Washington University, where he earned a Mechanical Engineering degree, and has led the company through 35 years in the window treatment industry."
+        }
       }
     },
     "serviceArea": {

@@ -4,8 +4,8 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { SectionIntro } from "@/components/ui/SectionIntro";
-import { aboutMedia } from "@/content/about";
-import { t } from "@/lib/i18n";
+import { aboutTeam } from "@/content/about";
+import { t, type TranslationKey } from "@/lib/i18n";
 
 import styles from "./Leadership.module.scss";
 
@@ -19,21 +19,37 @@ export function Leadership() {
           className={styles.Intro}
         />
 
-        <Reveal className={styles.Card}>
-          <Image
-            src={aboutMedia.founder}
-            alt={t("about.leadership.sia.imageAlt")}
-            width={240}
-            height={300}
-            className={styles.Portrait}
-          />
-          <div className={styles.Body}>
-            <p className={styles.Caption}>
-              {t("about.leadership.sia.name")} — {t("about.leadership.sia.role")}
-            </p>
-            <p className={styles.Bio}>{t("about.leadership.sia.bio")}</p>
-          </div>
-        </Reveal>
+        <div className={styles.Grid}>
+          {aboutTeam.map((member) => (
+            <Reveal key={member.id} className={styles.Card}>
+              <Image
+                src={member.image}
+                alt={t(
+                  `about.leadership.members.${member.id}.imageAlt` as TranslationKey,
+                )}
+                width={288}
+                height={360}
+                className={styles.Portrait}
+              />
+              <div className={styles.Body}>
+                <p className={styles.Caption}>
+                  {t(
+                    `about.leadership.members.${member.id}.name` as TranslationKey,
+                  )}{" "}
+                  —{" "}
+                  {t(
+                    `about.leadership.members.${member.id}.role` as TranslationKey,
+                  )}
+                </p>
+                <p className={styles.Bio}>
+                  {t(
+                    `about.leadership.members.${member.id}.bio` as TranslationKey,
+                  )}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </Container>
     </Section>
   );

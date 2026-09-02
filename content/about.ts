@@ -1,8 +1,14 @@
 export const aboutMedia = {
   story: "/images/about-office.jpg",
-  founder: "/images/sia-harandi.jpg",
   serviceArea: "/images/service-area-map.png",
 };
+
+export const aboutTeam = [
+  {
+    id: "sia",
+    image: "/images/sia-harandi.jpg",
+  },
+] as const;
 
 export const aboutPerks = [
   {
