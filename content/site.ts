@@ -1,7 +1,7 @@
 export const site = {
   phoneHref: "tel:+1-703-346-8533",
   tollFreeHref: "tel:+1-833-746-5636",
-  emailHref: "mailto:info@pinkblindsandshutters.com",
+  emailHref: "mailto:info@pinkshadesdesign.com",
 };
 
 export const navLinks = [

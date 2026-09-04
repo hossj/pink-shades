@@ -4,7 +4,7 @@
     "legalName": "© Pink Shades Design Center LLC",
     "phone": "703-346-8533",
     "tollFree": "1-833-PINKMEN (746-5636)",
-    "email": "info@pinkblindsandshutters.com",
+    "email": "info@pinkshadesdesign.com",
     "addressLine1": "6830 Elm Street",
     "addressLine2": "McLean, VA 22101"
   },
@@ -414,6 +414,9 @@
     "info": {
       "eyebrow": "Reach us",
       "visitTitle": "Visit",
+      "hoursLabel": "Showroom Hours:",
+      "hoursLine1": "Tuesday-Friday 10am-3pm.",
+      "hoursLine2": "Other times by appointment",
       "callTitle": "Call",
       "writeTitle": "Write",
       "directions": "Get directions"

@@ -26,6 +26,13 @@ export function ContactSection() {
               <br />
               {t("site.addressLine2")}
             </p>
+            <p className={styles.InfoText}>
+              <strong>{t("contact.info.hoursLabel")}</strong>
+              <br />
+              {t("contact.info.hoursLine1")}
+              <br />
+              {t("contact.info.hoursLine2")}
+            </p>
             <a
               href={directionsHref}
               target="_blank"

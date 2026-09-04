@@ -41,6 +41,10 @@
   color: var(--color-foreground-body);
 }
 
+.InfoText + .InfoText {
+  margin-top: 0.75rem;
+}
+
 .InfoLink {
   font-size: var(--text-body-sm);
   font-weight: var(--weight-semibold);
