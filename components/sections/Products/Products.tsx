@@ -9,12 +9,6 @@ import { t } from "@/lib/i18n";
 
 import styles from "./Products.module.scss";
 
-function splitName(name: string) {
-  const words = name.split(" ");
-  const mid = Math.ceil(words.length / 2);
-  return [words.slice(0, mid).join(" "), words.slice(mid).join(" ")];
-}
-
 export function Products() {
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -23,7 +17,6 @@ export function Products() {
       {products.map((product, index) => {
         const active = index === activeIndex;
         const name = t(product.nameKey);
-        const [line1, line2] = splitName(name);
 
         return (
           <button
@@ -43,16 +36,13 @@ export function Products() {
             />
             <div className={styles.Body}>
               <p className={styles.Tag}>{t(product.tagKey)}</p>
-              <h3 className={styles.Name}>
-                {line1}
-                <br />
-                {line2}
-              </h3>
-              {active && (
-                <p className={styles.Description}>
-                  {t(product.descriptionKey)}
-                </p>
-              )}
+              <h3 className={styles.Name}>{name}</h3>
+              <p
+                className={cx(styles.Description, active && styles.visible)}
+                aria-hidden={!active}
+              >
+                {t(product.descriptionKey)}
+              </p>
             </div>
           </button>
         );
