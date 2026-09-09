@@ -27,11 +27,10 @@ export const contactSchema = object({
       then: (schema) => schema.required("contact.form.errors.phoneRequired"),
     })
     .default(""),
-  method: string().oneOf([...contactMethods]).required(),
-  message: string()
-    .trim()
-    .max(5000)
-    .required("contact.form.errors.messageRequired"),
+  method: string().oneOf([...contactMethods, ""]).default(""),
+  topic: string().trim().max(100).default(""),
+  messageLabel: string().trim().max(60).default(""),
+  message: string().trim().max(5000).default(""),
 });
 
 export const estimateSchema = object({
@@ -43,4 +42,18 @@ export const estimateSchema = object({
     .email("estimate.errors.emailInvalid")
     .required("estimate.errors.emailRequired"),
   notes: string().trim().max(5000).default(""),
+});
+
+export const repairSchema = object({
+  name: string().trim().max(200).required("repairs.form.errors.nameRequired"),
+  phone: string().trim().max(50).required("repairs.form.errors.phoneRequired"),
+  email: string()
+    .trim()
+    .max(200)
+    .email("repairs.form.errors.emailInvalid")
+    .default(""),
+  message: string()
+    .trim()
+    .max(5000)
+    .required("repairs.form.errors.messageRequired"),
 });

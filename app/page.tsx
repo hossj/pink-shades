@@ -5,6 +5,7 @@ import {
   Hero,
   Motorization,
   Products,
+  Repairs,
   Stats,
   Testimonials,
 } from "@/components/sections";
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Products />
       <Motorization />
       <Benefits />
+      <Repairs />
       <Commercial />
       <Testimonials />
       <CallToAction />

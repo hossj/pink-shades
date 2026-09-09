@@ -1,0 +1,152 @@
+@use "@/styles/theme/mixins" as *;
+@use "@/styles/theme/responsive" as *;
+
+.Card {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  overflow: hidden;
+  background-color: var(--color-surface-inverse);
+  border-radius: var(--radius-2xl);
+
+  @include tablet-lg {
+    grid-template-columns: 1fr;
+  }
+}
+
+.MediaColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  padding: 40px;
+
+  @include desktop-sm {
+    padding: 32px;
+  }
+
+  @include tablet-lg {
+    padding: 32px 32px 0;
+  }
+
+  @include mobile-lg {
+    padding: 24px 24px 0;
+  }
+}
+
+.MediaHint {
+  font-size: var(--text-body-sm);
+  color: var(--color-on-dark-muted);
+  text-align: center;
+}
+
+.Body {
+  align-self: center;
+
+  /* The form sits directly on the dark card, so labels inherit a light ink
+     and field errors switch to the light pink that reads on this ground. */
+  --color-primary-dark: var(--color-primary-light);
+
+  padding: 56px;
+  color: var(--color-on-dark);
+
+  @include desktop-sm {
+    padding: 44px;
+  }
+
+  @include mobile-lg {
+    padding: 32px 24px;
+  }
+}
+
+.Title {
+  @include display-text;
+
+  margin-top: 14px;
+  font-size: var(--text-h3);
+  line-height: var(--leading-heading);
+  text-wrap: balance;
+}
+
+.Description {
+  max-width: 52ch;
+  margin-top: 18px;
+  font-size: var(--text-body);
+  line-height: var(--leading-loose);
+  color: var(--color-on-dark-strong);
+}
+
+.Form {
+  /* Field controls read the theme's light-surface variables; rescope them so
+     the inputs sit on the dark card instead of punching white holes in it. */
+  --color-background: rgba(250, 246, 241, 0.07);
+  --color-border: var(--color-on-dark-border);
+  --color-foreground: var(--color-on-dark);
+  --color-foreground-subtle: rgba(250, 246, 241, 0.55);
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.Row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  @include mobile-lg {
+    grid-template-columns: 1fr;
+  }
+}
+
+.FormError {
+  font-size: var(--text-body-sm);
+  color: var(--color-primary-light);
+}
+
+.Actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  margin-top: 6px;
+}
+
+.Footnote {
+  font-size: var(--text-body-sm);
+  color: var(--color-on-dark-muted);
+}
+
+.PhoneLink {
+  font-weight: var(--weight-semibold);
+  color: var(--color-on-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: var(--color-primary-light);
+  }
+}
+
+.Success {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 32px;
+  background-color: rgba(250, 246, 241, 0.06);
+  border: 1px solid var(--color-on-dark-border);
+  border-radius: var(--radius-xl);
+}
+
+.SuccessTitle {
+  @include display-text;
+
+  font-size: var(--text-h5);
+}
+
+.SuccessBody {
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-on-dark-strong);
+}

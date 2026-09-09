@@ -1,0 +1,77 @@
+@use "@/styles/theme/mixins" as *;
+
+.Frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  touch-action: none;
+  cursor: ns-resize;
+  user-select: none;
+}
+
+.Image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.BeforeLayer {
+  position: absolute;
+  inset: 0;
+}
+
+.LabelBefore,
+.LabelAfter {
+  @include mono-label;
+
+  position: absolute;
+  left: 14px;
+  padding: 6px 12px;
+  font-size: var(--text-mono-sm);
+  color: var(--color-on-dark);
+  background-color: var(--color-scrim-strong);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+}
+
+.LabelBefore {
+  top: 14px;
+}
+
+.LabelAfter {
+  bottom: 14px;
+}
+
+.Divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  height: 0;
+  border-top: 2px solid var(--color-on-dark);
+}
+
+.Handle {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 32px;
+  transform: translateY(-50%);
+  background-color: var(--color-on-dark);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 16px var(--color-scrim-medium);
+  cursor: ns-resize;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+}
+
+.Grip {
+  width: 20px;
+  height: 10px;
+  border-top: 2px solid var(--color-foreground);
+  border-bottom: 2px solid var(--color-foreground);
+}

@@ -14,6 +14,7 @@ export { MotorizationDetail } from "./MotorizationDetail";
 export { ProductDetail } from "./ProductDetail";
 export { Products } from "./Products";
 export { ProductsGrid } from "./ProductsGrid";
+export { Repairs } from "./Repairs";
 export { ServiceArea } from "./ServiceArea";
 export { Stats } from "./Stats";
 export { Testimonials } from "./Testimonials";
