@@ -50,15 +50,15 @@
       "tag": "N°02 — Shutters",
       "description": "Make your home energy efficient with high-end shutters."
     },
-    "solarShades": {
-      "name": "Solar Shades & Tracks",
+    "topDownBottomUp": {
+      "name": "Top Down Bottom Up Cellular Shades",
       "tag": "N°03 — Shades",
-      "description": "Cut glare and heat without losing your view."
+      "description": "Lower from the top or raise from the bottom for light and privacy at once."
     },
-    "cellularShades": {
-      "name": "Cellular Shades",
+    "designerRollerShades": {
+      "name": "Designer Roller Shades",
       "tag": "N°04 — Shades",
-      "description": "Insulating shades that keep comfort in and bills down."
+      "description": "Clean, modern rollers in a wide range of designer fabrics."
     }
   },
   "motorization": {
@@ -88,13 +88,56 @@
     },
     "estimate": {
       "tag": "At no charge",
-      "title": "Free in-home estimate",
+      "title": "Free in-home consultation",
       "description": "We come to you, measure, and quote at no charge."
     },
     "delivery": {
       "tag": "Self-measured",
       "title": "Free delivery",
-      "description": "Whenever you provide us with your own window measurements."
+      "description": "Free delivery anywhere in the United States when you provide your own window measurements."
+    },
+    "installation": {
+      "tag": "Nationwide",
+      "title": "Measurement & installation",
+      "description": "We offer measurement and installation services anywhere in the United States."
+    }
+  },
+  "repairs": {
+    "eyebrow": "Repairs",
+    "beforeAlt": "A roller shade with torn fabric and a broken mechanism before repair",
+    "afterAlt": "The same roller shade hanging smoothly after repair",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "sliderLabel": "Drag to compare the shade before and after repair",
+    "sliderValueText": "Before and after repair comparison",
+    "sliderHint": "Drag the handle up and down to compare",
+    "title": "Don't replace it — repair it",
+    "paragraphOne": "Do you have an expensive shade that's broken or not working properly? Before you spend hundreds — or even thousands — on a new one, let us take a look.",
+    "paragraphTwo": "We repair many types of blinds, shades, shutters and motorized window treatments, often for a fraction of the replacement cost. Save money and get years more out of what you already own.",
+    "form": {
+      "topic": "Repair request",
+      "nameLabel": "Name",
+      "namePlaceholder": "Jane Miller",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "(703) 555-0142",
+      "emailLabel": "Email",
+      "emailPlaceholder": "jane@example.com",
+      "optionalHint": "Optional",
+      "messageLabel": "What needs fixing?",
+      "messagePlaceholder": "Motorized roller shade in the living room stopped rolling up — about 6 years old.",
+      "messageHeading": "What needs fixing",
+      "submit": "Send repair request",
+      "submitting": "Sending…",
+      "orCall": "Or call us at",
+      "error": "Your request didn't go through. Try again, or give us a call.",
+      "successTitle": "Repair request received",
+      "successBody": "We'll be in touch within one business day to talk through the repair and what it will cost.",
+      "errors": {
+        "nameRequired": "Enter your name",
+        "phoneRequired": "Enter a phone number we can reach you on",
+        "emailInvalid": "Enter a valid email address",
+        "messageRequired": "Tell us what's not working"
+      }
     }
   },
   "commercial": {
@@ -155,6 +198,9 @@
     "notesHint": "(optional)",
     "notesPlaceholder": "Number of windows, rooms, timing…",
     "submit": "Request my estimate",
+    "submitting": "Sending…",
+    "error": "Your request didn't go through. Try again, or give us a call.",
+    "topic": "Estimate request",
     "orCall": "or call",
     "notesPrefill": "Hi, I'm interested in",
     "errors": {
@@ -207,6 +253,12 @@
           "name": "Sia Harandi",
           "role": "Senior Advisor",
           "bio": "Sia Harandi attended George Washington University, where he earned a Mechanical Engineering degree, and has led the company through 35 years in the window treatment industry."
+        },
+        "sonia": {
+          "imageAlt": "Sonia Montes De Oca",
+          "name": "Sonia Montes De Oca",
+          "role": "Senior Interior Designer",
+          "bio": "Sonia is a seasoned interior designer with three decades of experience in transforming living spaces through customized furnishings, wallpaper selection, tailored window treatments, carpets, and curated accessories. She offers bilingual support, proudly accommodating Spanish-speaking clients (Se habla español)."
         }
       }
     },

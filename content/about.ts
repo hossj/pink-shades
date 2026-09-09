@@ -8,6 +8,10 @@ export const aboutTeam = [
     id: "sia",
     image: "/images/sia-harandi.jpg",
   },
+  {
+    id: "sonia",
+    image: "/images/sonia-montes-de-oca.jpg",
+  },
 ] as const;
 
 export const aboutPerks = [
@@ -24,5 +28,12 @@ export const aboutPerks = [
     tagKey: "benefits.delivery.tag",
     titleKey: "benefits.delivery.title",
     descriptionKey: "benefits.delivery.description",
+  },
+  {
+    id: "installation",
+    icon: "ladder",
+    tagKey: "benefits.installation.tag",
+    titleKey: "benefits.installation.title",
+    descriptionKey: "benefits.installation.description",
   },
 ] as const;

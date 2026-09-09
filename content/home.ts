@@ -2,6 +2,8 @@ export const media = {
   hero: "/images/hero-plantation-shutters.jpg",
   rollerShades: "/images/roller-shades.jpg",
   commercial: "/images/commercial.jpg",
+  repairBefore: "/images/roller-shade-before.webp",
+  repairAfter: "/images/roller-shade-after.webp",
 };
 
 export const stats = [
@@ -41,18 +43,18 @@ export const products = [
     descriptionKey: "products.plantationShutters.description",
   },
   {
-    id: "solarShades",
-    image: "/images/roller-shades.jpg",
-    nameKey: "products.solarShades.name",
-    tagKey: "products.solarShades.tag",
-    descriptionKey: "products.solarShades.description",
+    id: "topDownBottomUp",
+    image: "/images/top-down-bottom-up-shades.jpg",
+    nameKey: "products.topDownBottomUp.name",
+    tagKey: "products.topDownBottomUp.tag",
+    descriptionKey: "products.topDownBottomUp.description",
   },
   {
-    id: "cellularShades",
-    image: "/images/cellular-shades.jpg",
-    nameKey: "products.cellularShades.name",
-    tagKey: "products.cellularShades.tag",
-    descriptionKey: "products.cellularShades.description",
+    id: "designerRollerShades",
+    image: "/images/roller-shades.jpg",
+    nameKey: "products.designerRollerShades.name",
+    tagKey: "products.designerRollerShades.tag",
+    descriptionKey: "products.designerRollerShades.description",
   },
 ] as const;
 

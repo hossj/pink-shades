@@ -1,7 +1,7 @@
 @use "@/styles/theme/responsive" as *;
 
 .Container {
-  max-width: calc(920px + 2 * var(--container-padding));
+  max-width: calc(1100px + 2 * var(--container-padding));
 }
 
 .Intro {
@@ -10,10 +10,10 @@
 
 .Grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 
-  @include tablet-sm {
+  @include tablet-lg {
     grid-template-columns: 1fr;
   }
 }
