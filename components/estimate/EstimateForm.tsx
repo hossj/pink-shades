@@ -1,6 +1,7 @@
 "use client";
 
 import { useFormik } from "formik";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Field, Input, Textarea } from "@/components/ui/Field";
@@ -16,6 +17,8 @@ interface Props {
 }
 
 export function EstimateForm({ note, onSubmitted }: Props) {
+  const [failed, setFailed] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -24,8 +27,28 @@ export function EstimateForm({ note, onSubmitted }: Props) {
       notes: note,
     },
     validationSchema: estimateSchema,
-    onSubmit: () => {
-      onSubmitted();
+    onSubmit: async (values) => {
+      setFailed(false);
+      const [firstName, ...rest] = values.name.trim().split(" ");
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            firstName,
+            lastName: rest.join(" "),
+            email: values.email,
+            phone: values.phone,
+            message: values.notes,
+            messageLabel: t("estimate.notesLabel"),
+            topic: t("estimate.topic"),
+          }),
+        });
+        if (!response.ok) throw new Error(String(response.status));
+        onSubmitted();
+      } catch {
+        setFailed(true);
+      }
     },
   });
 
@@ -84,13 +107,19 @@ export function EstimateForm({ note, onSubmitted }: Props) {
         />
       </Field>
 
+      {failed && (
+        <p className={styles.Error} role="alert">
+          {t("estimate.error")}
+        </p>
+      )}
+
       <Button
         type="submit"
         size="large"
         disabled={formik.isSubmitting}
         className={styles.Submit}
       >
-        {t("estimate.submit")}
+        {formik.isSubmitting ? t("estimate.submitting") : t("estimate.submit")}
       </Button>
 
       <p className={styles.Footnote}>
