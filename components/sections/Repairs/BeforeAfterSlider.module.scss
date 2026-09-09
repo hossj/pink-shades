@@ -20,6 +20,13 @@
   inset: 0;
 }
 
+/* Only the introductory nudge is animated; dragging stays 1:1 with the pointer. */
+.animating {
+  transition:
+    clip-path var(--duration-slow) var(--ease-default),
+    top var(--duration-slow) var(--ease-default);
+}
+
 .LabelBefore,
 .LabelAfter {
   @include mono-label;

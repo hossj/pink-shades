@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
+import { cx } from "@/lib/cx";
 import { t } from "@/lib/i18n";
 
 import styles from "./BeforeAfterSlider.module.scss";
@@ -14,10 +15,59 @@ interface Props {
 
 const clamp = (value: number) => Math.min(100, Math.max(0, value));
 
+const REST_POSITION = 52;
+/** A small nudge up, then down, then back to rest — enough to read as draggable. */
+const HINT_DELAY = 1000;
+const HINT_STEPS = [
+  { position: 45, after: 620 },
+  { position: 59, after: 620 },
+  { position: REST_POSITION, after: 620 },
+];
+
 export function BeforeAfterSlider({ before, after }: Props) {
   const frameRef = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState(52);
+  const [position, setPosition] = useState(REST_POSITION);
   const [dragging, setDragging] = useState(false);
+  const [hinting, setHinting] = useState(false);
+  const touched = useRef(false);
+
+  // Once the slider reaches the middle of the viewport, walk the handle
+  // through a short up-down cycle so it reads as something you can drag.
+  useEffect(() => {
+    const frame = frameRef.current;
+    if (!frame) return;
+
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reduced.matches) return;
+
+    const timers: ReturnType<typeof setTimeout>[] = [];
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || touched.current) return;
+        observer.disconnect();
+        timers.push(setTimeout(() => setHinting(true), HINT_DELAY - 50));
+
+        let elapsed = HINT_DELAY;
+        HINT_STEPS.forEach((step) => {
+          timers.push(
+            setTimeout(() => {
+              if (!touched.current) setPosition(step.position);
+            }, elapsed),
+          );
+          elapsed += step.after;
+        });
+        timers.push(setTimeout(() => setHinting(false), elapsed));
+      },
+      { rootMargin: "-35% 0px -35% 0px" },
+    );
+
+    observer.observe(frame);
+    return () => {
+      observer.disconnect();
+      timers.forEach(clearTimeout);
+    };
+  }, []);
 
   const positionFromEvent = useCallback((clientY: number) => {
     const frame = frameRef.current;
@@ -25,6 +75,11 @@ export function BeforeAfterSlider({ before, after }: Props) {
     const { top, height } = frame.getBoundingClientRect();
     setPosition(clamp(((clientY - top) / height) * 100));
   }, []);
+
+  const stopHint = () => {
+    touched.current = true;
+    setHinting(false);
+  };
 
   const onKeyDown = (event: React.KeyboardEvent) => {
     const step = event.shiftKey ? 10 : 4;
@@ -47,6 +102,7 @@ export function BeforeAfterSlider({ before, after }: Props) {
       ref={frameRef}
       className={styles.Frame}
       onPointerDown={(event) => {
+        stopHint();
         event.currentTarget.setPointerCapture(event.pointerId);
         setDragging(true);
         positionFromEvent(event.clientY);
@@ -67,7 +123,7 @@ export function BeforeAfterSlider({ before, after }: Props) {
         draggable={false}
       />
       <div
-        className={styles.BeforeLayer}
+        className={cx(styles.BeforeLayer, hinting && styles.animating)}
         style={{ clipPath: `inset(0 0 ${100 - position}% 0)` }}
       >
         <Image
@@ -92,7 +148,10 @@ export function BeforeAfterSlider({ before, after }: Props) {
         </span>
       )}
 
-      <div className={styles.Divider} style={{ top: `${position}%` }}>
+      <div
+        className={cx(styles.Divider, hinting && styles.animating)}
+        style={{ top: `${position}%` }}
+      >
         <button
           type="button"
           role="slider"
@@ -102,7 +161,10 @@ export function BeforeAfterSlider({ before, after }: Props) {
           aria-valuenow={Math.round(position)}
           aria-valuetext={t("repairs.sliderValueText")}
           aria-orientation="vertical"
-          onKeyDown={onKeyDown}
+          onKeyDown={(event) => {
+            stopHint();
+            onKeyDown(event);
+          }}
           className={styles.Handle}
         >
           <span className={styles.Grip} aria-hidden="true" />
