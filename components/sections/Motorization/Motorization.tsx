@@ -9,16 +9,6 @@ import styles from "./Motorization.module.scss";
 export function Motorization() {
   return (
     <section id="motorization" className={styles.Motorization}>
-      <Reveal className={styles.Media}>
-        <CoverImage
-          src={media.rollerShades}
-          alt={t("motorization.imageAlt")}
-          scrim="soft"
-          sizes="(max-width: 991px) 100vw, 45vw"
-          className={styles.Image}
-        />
-      </Reveal>
-
       <Reveal className={styles.Body}>
         <Eyebrow tone="light">{t("motorization.eyebrow")}</Eyebrow>
         <h2 className={styles.Title}>{t("motorization.title")}</h2>
@@ -37,6 +27,16 @@ export function Motorization() {
             </li>
           ))}
         </ul>
+      </Reveal>
+
+      <Reveal className={styles.Media}>
+        <CoverImage
+          src={media.rollerShades}
+          alt={t("motorization.imageAlt")}
+          scrim="soft"
+          sizes="(max-width: 991px) 100vw, 45vw"
+          className={styles.Image}
+        />
       </Reveal>
     </section>
   );
