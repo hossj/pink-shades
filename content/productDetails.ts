@@ -271,6 +271,13 @@ export const productDetails = {
       { src: "/images/products/gallery/draperyAndCurtains-10.jpg", width: 1400, height: 1050 },
       { src: "/images/products/gallery/draperyAndCurtains-11.jpg", width: 1400, height: 1050 },
       { src: "/images/products/gallery/draperyAndCurtains-12.jpg", width: 1009, height: 1400 },
+      { src: "/images/products/gallery/draperyAndCurtains-13.webp", width: 1600, height: 1200 },
+      { src: "/images/products/gallery/draperyAndCurtains-14.webp", width: 1153, height: 1600 },
+      { src: "/images/products/gallery/draperyAndCurtains-15-cropped.webp", width: 738, height: 1017 },
+      { src: "/images/products/gallery/draperyAndCurtains-16-cropped.webp", width: 738, height: 549 },
+      { src: "/images/products/gallery/draperyAndCurtains-17.webp", width: 1200, height: 1600 },
+      { src: "/images/products/gallery/draperyAndCurtains-18.webp", width: 1607, height: 979 },
+      { src: "/images/products/gallery/draperyAndCurtains-19.webp", width: 1289, height: 1296 },
     ],
   },
   retractableScreens: {
@@ -279,6 +286,10 @@ export const productDetails = {
     introKeys: ["productsPage.details.retractableScreens.intro1"],
     photos: [
       { src: "/images/products/gallery/retractableScreens-1.jpg", width: 800, height: 800 },
+      { src: "/images/products/gallery/retractableScreens-2.webp", width: 1289, height: 933 },
+      { src: "/images/products/gallery/retractableScreens-3.webp", width: 1289, height: 791 },
+      { src: "/images/products/gallery/retractableScreens-4.webp", width: 1289, height: 800 },
+      { src: "/images/products/gallery/retractableScreens-5.webp", width: 1289, height: 1248 },
     ],
     blocks: [
     { kind: "p", key: "productsPage.details.retractableScreens.block1" },
@@ -293,6 +304,13 @@ export const productDetails = {
     slug: "window-films-and-decorative-glass",
     image: "/images/products/window-films.jpg",
     introKeys: ["productsPage.details.windowFilms.intro1"],
+    photos: [
+      { src: "/images/products/gallery/windowFilms-1.webp", width: 1289, height: 831 },
+      { src: "/images/products/gallery/windowFilms-2.webp", width: 1289, height: 999 },
+      { src: "/images/products/gallery/windowFilms-3.webp", width: 1289, height: 1169 },
+      { src: "/images/products/gallery/windowFilms-4.webp", width: 1289, height: 869 },
+      { src: "/images/products/gallery/windowFilms-5.webp", width: 1289, height: 1266 },
+    ],
     sections: [
       { titleKey: "productsPage.details.windowFilms.section1Title", textKey: "productsPage.details.windowFilms.section1Text", image: "/images/products/film-security.jpg" },
       { titleKey: "productsPage.details.windowFilms.section2Title", textKey: "productsPage.details.windowFilms.section2Text", image: "/images/products/film-decorative.jpg" },
